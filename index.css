@@ -1,6 +1,168 @@
-body {
+/* FONT IMPORT */
+/* Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* // MAIN STYLING */
+
+/* Wireframe */
+*{
+    /* border: 1px solid black; */
+}
+/* VARIABLES */
+:root {
+    --main-color: #B480C6;
+    --second-color: #F5F5F5;
+}
+/* GENERAL STYLING */
+body, html {
+    margin: 0;
+    padding: 0;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 ul {
     list-style-type: none;
+}
+a{
+    text-emphasis: none;
+    text-decoration: none;
+    color: var(--second-color);
+    cursor: pointer;
+}
+li a{
+    color: black;
+}
+label{
+    color: var(--second-color);
+}
+select{
+    height: 30px;
+    border: none;
+    border-radius: 3px;
+    box-shadow: 0px 0px 2px black;
+}
+@media screen and (max-width: 480px){
+    select{
+        height: 50px;
+        width: 100%;
+    }
+}
+
+/* BUTTON STYLING */
+/* @keyframes hoverInOut {
+    from {box-shadow: 0px 0px 2px black;}
+    to {box-shadow: 0px 0px 3px black;}
+} */
+.submitButton{
+    height: 30px;
+    width: 80px;
+    background-color: var(--second-color);
+    border-radius: 3px;
+    cursor: pointer;
+    border: none;
+    color: black;
+    margin-left: 10px;
+    box-shadow: 0px 0px 2px black;
+}
+.submitButton:hover{
+    animation: hoverInOut 0.3s forwards;
+}
+/* Button Media Query */
+@media screen and (max-width: 480px){
+    .submitButton{
+        width: 100%;
+        height: 40px;
+        margin: 0;
+        margin-top: 20px;
+    }
+}
+
+/*/* NAV/HEADER STYLING */
+/* Nav Logo */
+.brandlogo{
+    display: flex;
+    position: relative;
+
+}
+#logo{
+    height: 50px;
+
+}
+/* General Nav */
+nav{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 5fr;
+    min-height: 8vh;
+    background: var(--main-color);
+    box-shadow: 0px 4px 10px rgba(67, 67, 67, 0.25);
+}
+.navFlex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+}
+/* navItem1 [LOGO] */
+/* navItem2 [LINKS] */
+/* navItem1 [SEARCH] */
+/* Nav Media Query */
+@media screen and (max-width: 480px){
+    nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 270px;
+        margin: 0;
+    }
+    .navItem1{
+        display: none;
+    }
+    .navItem3{
+        width: 50%;
+    }
+}
+
+/* RESULT STYLING */
+.resultsContainer{
+    /* background: blue; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.results{
+    /* background: red; */
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: auto;
+    margin: auto;
+}
+
+.resultCard{
+    background-color: #F9F9F9;
+    box-shadow: 0px 0px 3px grey;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 350px;
+    margin: auto;
+    margin-bottom: 5%;
+}
+.resultCard li{
+    margin: 5px;
+    padding: 2px;
+}
+
+/* Results Media Query */
+@media screen and (max-width: 480px){
+    .results{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
 }
