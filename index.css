@@ -5,6 +5,25 @@ ul {
     list-style-type: none;
 }
 
+nav {
+    position: fixed;
+    background-color: darkgray;
+    top: 0;
+    width: 100vw;
+    text-align: center;
+}
+
+nav p {
+    display: inline-block;
+    margin: 10px;
+    padding: 10px;
+    border 1px solid white;
+}
+
+nav p:hover {
+    background-color: lightgray;
+}
+
 .landing {
     height: 100vh;
     background-color: purple;
