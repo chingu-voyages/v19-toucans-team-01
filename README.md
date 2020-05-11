@@ -15,6 +15,7 @@ This project helps the team members gain valuable team skills and familiarize th
 ## Livesite
 
 * Currently being developed.
+[Live Demo](https://chingu-voyages.github.io/v19-toucans-team-01/)
 
 ## Features
 
