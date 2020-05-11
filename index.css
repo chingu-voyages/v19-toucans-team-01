@@ -4,3 +4,33 @@ body {
 ul {
     list-style-type: none;
 }
+
+.landing {
+    height: 100vh;
+    background-color: purple;
+}
+
+.about-us {
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+.pet-quiz {
+    height: 100vh;
+    background-color: purple;
+}
+
+.more-info {
+    height: 100vh;
+    background-color: lightgrey;
+}
+
+.pic-collage {
+    height: 100vh;
+    background-color: purple;
+}
+
+.contact-us {
+    height: 100vh;
+    background-color: lightgrey;
+}
