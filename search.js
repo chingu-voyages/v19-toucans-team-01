@@ -41,26 +41,26 @@ data.map((i) => {
   i.photos[0] === undefined ? 
  //list to render if no photos are provided (it was throwing errors with the api) 
         $('.results').append(`
-    <ul>
-    <li>Name: ${i.name}</li>
-    <li>Breed: ${i.breeds.primary}</li>
-    <li>Gender: ${i.gender}</li>
-    <li>Age: ${i.age}</li>
-    <li><a href=${i.url} target="_blank">More about ${i.name} </a></li>
-    <li><a href='mailto:${i.contact.email}'>Email Shelter</a></li>
+    <ul class="resultCard" >
+    <li><strong>Name:</strong> ${i.name}</li>
+    <li><strong>Breed:</strong> ${i.breeds.primary}</li>
+    <li><strong>Gender:</strong> ${i.gender}</li>
+    <li><strong>Age:</strong> ${i.age}</li>
+    <li><a href=${i.url} target="_blank"><strong>More about ${i.name} <strong></a></li>
+    <li><a href='mailto:${i.contact.email}'><em>Email Shelter</em></a></li>
     </ul>
     `)
     : 
   //otherwise render with animal photo
     $('.results').append(`
-    <ul>
-    <li>Name: ${i.name}</li>
+    <ul class="resultCard" >
+    <li><strong>Name:</strong> ${i.name}</li>
     <img src='${i.photos[0].medium}' alt='animal'>
-    <li>Breed: ${i.breeds.primary}</li>
-    <li>Gender: ${i.gender}</li>
-    <li>Age: ${i.age}</li>
-    <li><a href=${i.url} target="_blank">More about ${i.name} </a></li>
-    <li><a href='mailto:${i.contact.email}'>Email Shelter</a></li>
+    <li><strong>Breed:</strong> ${i.breeds.primary}</li>
+    <li><strong>Gender:</strong> ${i.gender}</li>
+    <li><strong>Age:</strong> ${i.age}</li>
+    <li><a href=${i.url} target="_blank"><strong>More about ${i.name} </strong></a></li>
+    <li><a href='mailto:${i.contact.email}'><em>Email Shelter</em></a></li>
     </ul>
     `);
   });
