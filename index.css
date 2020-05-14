@@ -8,31 +8,27 @@
 nav {
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: space-around;
+    align-items: center;
     min-height: 8vh;
-    background-color: #5E7056;
+    background-color: #12BB97;
     font-family: 'Poppins', sans-serif;
 }
-
-
 .logo {
     color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
+    margin: 10px 0px 10px 30px;
 }
-
 .nav-links {
     display: flex;
     justify-content: space-evenly;
     width: 200%;
 }
-
 .nav-links li {
     list-style: none;
 }
-
 .nav-links a {
     color: white;
     text-decoration: none;
@@ -40,11 +36,9 @@ nav {
     font-weight: bold;
     font-size: 14px;
 }
-
 .burger {
     display: none;
 }
-
 .burger div{
     width: 25px;
     height: 5px;
@@ -52,14 +46,11 @@ nav {
     margin: 5px;
     transition: all 0.3s ease;
 }
-
-
 @media screen and (max-width: 1024px){
    .nav-links{
         width: 60%;
     }
 }
-
 @media screen and (max-width:768px){
    body{
        overflow-x: hidden;
@@ -69,7 +60,7 @@ nav {
         right: 0px;
         height: 92vh;
         top: 8vh;
-        background-color: #5E7056;
+        background-color: #12BB97;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -85,12 +76,10 @@ nav {
         cursor: pointer;
 
     }
-
 }
 .nav-active {
     transform: translateX(0%);
 }
-
 @keyframes navLinkFade{
     from{
         opacity: 0;
@@ -101,20 +90,15 @@ nav {
         transform: translateX(0px);
     }
 }
-
 .toggle .line1{
     transform: rotate(-45deg) translate(-5px,6px);
 }
-
 .toggle .line2{
     opacity: 0;
 }
-
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
-
-
 body {
     text-align: center;
 }
@@ -124,9 +108,8 @@ ul {
 
 .landing {
     height: 100vh;
-    background-color: darkgray;
+    background-color: #143D47;
 }
-
 .three-box {
     display: flex;
     flex-direction: row;
@@ -134,12 +117,13 @@ ul {
     align-items: center;
     height: 100vh;
     background-color: lightgray;
+    font-family: 'Poppins', sans-serif;
 }
 
 .three-box div {
     height: 500px;
     width: 400px;
-    background-color: lightcoral;
+    background-color: #F7E4A8;
     margin: 0px 10px 0px 10px;
     text-align: center;
 }
@@ -178,10 +162,10 @@ ul {
 
 .pic-collage {
     height: 100vh;
-    background-color: darkgray;
+    background-color: #E96435;
 }
 
 .contact-us {
     height: 100vh;
-    background-color: lightgrey;
+    background-color: #143D47;
 }
