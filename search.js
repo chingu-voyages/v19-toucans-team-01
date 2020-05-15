@@ -6,6 +6,7 @@ const secret = 'KOE3gOf7D7j36alVVrzPfGLZLzIQjnmXXUcQN4Rx';
 function homeRender() {
   $('.home').click(function() {
     $('.bottom').show();
+    $('.landing').show();
     $('.results').hide();
   })
 }
@@ -73,7 +74,7 @@ data.map((i) => {
     `);
   });
   $('.results').show();
-  $('.bottom').hide(); 
+  $('.bottom').hide();
   homeRender();
 }
 //builds the fetch url based off of type of animal and state of location
@@ -88,6 +89,7 @@ function getValues() {
     let type = $('#types').val();
     let location = $('#locations').val();
     let fetchUrl = buildUrl(type, location);
+    $('.landing').hide();
     fetchAnimals(fetchUrl);
   })
 }
