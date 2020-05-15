@@ -3,6 +3,14 @@
 const key = 'DxMJ184GRqtRPnaqWdp3BbMtG00mbQtE8feSDnTiM6fAHO997P';
 const secret = 'KOE3gOf7D7j36alVVrzPfGLZLzIQjnmXXUcQN4Rx';
 
+function homeRender() {
+  $('.home').click(function() {
+    $('.bottom').show();
+    $('.landing').show();
+    $('.results').hide();
+  })
+}
+
 function fetchAnimals(fetchUrl) {
 //getting authorization bearer for each separate fetch call
 fetch('https://api.petfinder.com/v2/oauth2/token', {
@@ -43,6 +51,7 @@ data.map((i) => {
         $('.results').append(`
     <ul class="resultCard" >
     <li><strong>Name:</strong> ${i.name}</li>
+    <img src='images/noPhoto.jpg' alt='animal'>
     <li><strong>Breed:</strong> ${i.breeds.primary}</li>
     <li><strong>Gender:</strong> ${i.gender}</li>
     <li><strong>Age:</strong> ${i.age}</li>
@@ -64,7 +73,9 @@ data.map((i) => {
     </ul>
     `);
   });
-  $('.results').removeClass('hidden'); 
+  $('.results').show();
+  $('.bottom').hide();
+  homeRender();
 }
 //builds the fetch url based off of type of animal and state of location
 function buildUrl(type, location) {
@@ -78,6 +89,7 @@ function getValues() {
     let type = $('#types').val();
     let location = $('#locations').val();
     let fetchUrl = buildUrl(type, location);
+    $('.landing').hide();
     fetchAnimals(fetchUrl);
   })
 }

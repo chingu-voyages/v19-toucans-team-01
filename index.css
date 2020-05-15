@@ -28,6 +28,7 @@ nav {
 }
 .nav-links li {
     list-style: none;
+    padding-right: 10px;
 }
 .nav-links a {
     color: white;
@@ -109,6 +110,75 @@ ul {
 .landing {
     height: 100vh;
     background-color: #143D47;
+    display: block;
+    text-align: center;
+}
+
+label {
+    font-family: 'Poppins', sans-serif;
+    color: #143D47;
+    font-size: 20px;
+    display: block;
+    padding: 20px;
+    font-weight: bold;
+}
+.searchCategories{
+    width: 150px;
+    opacity: 0.9;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 13px;
+    padding: 10px 8px 10px 14px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    position: relative;
+  }
+
+  select:hover {
+      cursor: pointer;
+  }
+  
+  .searchCategories .select select{
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    position: relative;
+    z-index: 10;
+    font-size: 1em;
+  }
+
+.petSearch {
+    background-image: linear-gradient(to right,rgba(255, 214, 153, 0.3),rgba(255, 184, 77, 0.3)), url(images/dog-paws.jpg);
+    background-size: cover;
+    height: 350px;
+    width: 400px;
+    display: inline-block;
+    margin-top: 15vh;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; 
+    border-radius: 6px;  
+}
+.submitButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 10px;
+    border-color: #E96435;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: #E96435;
+    color: white;
+}
+
+.submitButton:hover {
+    cursor: pointer;
 }
 .three-box {
     display: flex;
