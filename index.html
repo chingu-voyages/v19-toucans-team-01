@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width">
     <title>Hachiko</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -112,16 +113,18 @@
 
     <section class="three-box">
       <div>
-        <h3>Find Your Best Friend</h3>
+        <h3>Find Your Pet</h3>
+        <p><i class="fas fa-bone"></i></p>
         <button>Click Here!</button>
       </div>
       <div>
-        <h3>Take Our Pet Quiz!</h3>
+        <h3>Take The Quiz!</h3>
+        <p><i class="fas fa-cat"></i></p>
         <button>Take the Quiz!</button>
       </div>
       <div>
-        <img src="./assets/Hachiko">
-        <h3>Read more about HACHIKŌ</h3>
+        <h3>More about Hachikō</h3>
+        <p><i class="fas fa-paw"></i></p>
         <button>About HACHIKŌ</button>
       </div>
     </section>
@@ -130,10 +133,28 @@
 
     </section>
 
-    <section class="contact-us">
-      
-    </section>
-
+    <section class="contact-form">
+      <h2 id="contact">Contact Form</h2>
+      <div>
+          <p>We would love to hear from you! Drop us a line down below, and we will get back to you ASAP!</p>
+      </div>
+      <form>
+          <div class="test">
+              <div class="testOne">
+                  <input type="text" id="name" name="name" placeholder="Name">
+                  <br>
+                  <input type="text" id="email" name="email" placeholder="Email">
+                  <br>
+                  <input type="text" id="subject" name="subject" placeholder="Subject"> 
+              </div>
+              <div class="testTwo">
+                  <textarea id="comments" name="comments" placeholder="Your message here..." style="height:200px"></textarea>
+              <br>
+                  <input type="submit" value="Send">
+              </div>
+          </div>
+      </form> 
+  </section>
 
 
   </body>
