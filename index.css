@@ -15,11 +15,14 @@ nav {
     font-family: 'Poppins', sans-serif;
 }
 .logo {
-    color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
     margin: 10px 0px 10px 30px;
+}
+.logo img{
+    height:8vh;
+    width:8vh;
 }
 .nav-links {
     display: flex;
@@ -108,8 +111,8 @@ ul {
 }
 
 .landing {
-    height: 70vh;
-    background-color: #143D47;
+    height: 70vh; 
+    background-color: #464655;
     display: block;
     text-align: center;
 }
@@ -154,12 +157,13 @@ label {
 .petSearch {
     background-image: linear-gradient(to right,rgba(255, 214, 153, 0.3),rgba(255, 184, 77, 0.3)), url(images/dog-paws.jpg);
     background-size: cover;
-    height: 350px;
-    width: 400px;
+    height: 400px;
+    width: 900px;
     display: inline-block;
-    margin-top: 15vh;
+    margin-top: 12vh;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 55vh;
     text-align: center; 
     border-radius: 6px;  
 }
@@ -186,7 +190,7 @@ label {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #F7E4A8;
+    background-color: #143D47;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -214,13 +218,10 @@ label {
     color: black;
 }
 
-
 .btn1:hover,.btn2:hover,.btn3:hover {
     background-color: #143D47;
     color: #12BB97;
 }
-
-
 
 .extraClass {
     font-size: 100px;
@@ -231,7 +232,6 @@ label {
     height: 100vh;
     background-color: darkgrey;
 }
-
 .pet-quiz {
     height: 100vh;
     background-color: lightgray;
@@ -247,17 +247,13 @@ label {
     background-color: #E96435;
 }
 
-.contact-us {
-    height: 100vh;
-    background-color: #143D47;
-}
 
 .contact-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -265,11 +261,12 @@ label {
     font-family: 'Acme' , sans-serif;
     color: black;
     overflow-x: hidden;
+    background-color: #143D47;
 }
 
 .contact-form h2 {
     text-align: center;
-    color: white;
+    color: Black;
     font-size: 40px;
 }
 
@@ -277,7 +274,7 @@ label {
     height: 100px;
     width: 670px;
     justify-content: center;
-    background-color: lightgray;
+    background-color: #12BB97;
     color: black;
     opacity: 0.5;
     padding: 15px;
@@ -344,4 +341,8 @@ input[type=button], input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.footer {
+    height:20vh;
 }
