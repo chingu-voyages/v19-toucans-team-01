@@ -112,12 +112,12 @@ ul {
 
 .landing {
     height: 70vh; 
-    background-color: #464655;
+    background-color: #143D47;
     display: block;
     text-align: center;
 }
 
-label {
+.landingLabel {
     font-family: 'Poppins', sans-serif;
     color: #143D47;
     font-size: 20px;
@@ -137,6 +137,12 @@ label {
     border-radius: 6px;
     position: relative;
   }
+  select {
+    -moz-appearance: window;
+    -webkit-appearance: none;
+    background: #f5f5f5 url("/images/arrow_down.png") right center no-repeat;
+    padding-right: 20px;
+}
 
   select:hover {
       cursor: pointer;
@@ -184,6 +190,115 @@ label {
 .submitButton:hover {
     cursor: pointer;
 }
+
+
+.resultCard{
+    background-color: #F7E4A8;
+    width: 350px;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.animalImg, .imgNotAvail {
+    max-height: 200px;
+    max-width: 250px;
+    border-radius: 6px;
+}
+
+.results {
+    font-family: 'Poppins', sans-serif;
+}
+
+form.searchForm {
+    display: none;
+}
+
+.searchSubmitButton {
+    padding: 4px;
+    border-color: #E96435;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: #E96435;
+    color: white;
+    margin-left: 10px;
+}
+
+.searchSubmitButton:hover {
+    cursor: pointer;
+}
+
+select#searchSize {
+    width: 90px;
+}
+select#searchAge {
+    width: 90px;
+}
+select#searchGender {
+    width: 90px;
+}
+.searchPageCategories{
+    width: 90px;
+    height: 30px;
+    opacity: 0.9;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    position: relative;
+  }
+  .selectSearchPage {
+    text-align: left;
+    padding-left: 4px;
+  }
+  .searchPageCategories:hover {
+      cursor: pointer;
+  }
+  .searchPageCategories .selectSearchPage select{
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    position: relative;
+    z-index: 10;
+    font-size: 1em;
+  }
+
+
+  @media screen and (max-width: 649px) {
+      .searchResultsPage {
+          display: flex;
+          flex-direction: row;
+      }
+      .searchForm {
+          flex-direction: column;
+          max-width: 100px;
+          margin-right: 50px;
+      }
+  }
+
+@media screen and (min-width: 650px) {
+    .results {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+
 .three-box {
     height: 60vh;
     display: flex;
