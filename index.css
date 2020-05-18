@@ -180,6 +180,40 @@ label {
 .submitButton:hover {
     cursor: pointer;
 }
+
+
+.resultCard{
+    background-color: #F7E4A8;
+    width: 350px;
+    padding: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+.animalImg, .imgNotAvail {
+    max-height: 200px;
+    max-width: 250px;
+    border-radius: 6px;
+}
+
+.results {
+    font-family: 'Poppins', sans-serif;
+}
+
+
+@media screen and (min-width: 650px) {
+    .results {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+}
+
+
+
 .three-box {
     height: 60vh;
     display: flex;
