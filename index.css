@@ -282,6 +282,7 @@ label {
     margin-bottom: 3%;
     border-radius: 5px;
     border: 2px solid black;
+    font-family: 'Poppins', sans-serif;
 }
 
 .test {
@@ -290,11 +291,13 @@ label {
     flex-direction: row;
     justify-content: center;
     border-radius: 100%;
+    font-family: 'Poppins', sans-serif;
 }
 
 ::placeholder {
     color: black;
     opacity: 1;
+    font-family: 'Poppins', sans-serif;
 }
 
 .testOne {
@@ -305,6 +308,7 @@ label {
     padding: 0px 10px;
     margin: 5px;
     border-radius: 5px 25px 25px 0px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .testTwo {
@@ -314,6 +318,7 @@ label {
     flex-direction: column;
     opacity: 0.5;
     border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
 }
 
 input[type=text] { 
@@ -328,6 +333,7 @@ textarea {
     width: 342px;
     border-radius: 5px;
     border: 2px solid black;
+    font-family: 'Poppins', sans-serif;
 }
 
 
