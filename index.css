@@ -15,11 +15,14 @@ nav {
     font-family: 'Poppins', sans-serif;
 }
 .logo {
-    color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
     font-size: 20px;
     margin: 10px 0px 10px 30px;
+}
+.logo img{
+    height:8vh;
+    width:8vh;
 }
 .nav-links {
     display: flex;
@@ -108,13 +111,13 @@ ul {
 }
 
 .landing {
-    height: 70vh;
-    background-color: #143D47;
+    height: 70vh; 
+    background-color: #464655;
     display: block;
     text-align: center;
 }
 
-label {
+.landingLabel {
     font-family: 'Poppins', sans-serif;
     color: #143D47;
     font-size: 20px;
@@ -134,6 +137,12 @@ label {
     border-radius: 6px;
     position: relative;
   }
+  select {
+    -moz-appearance: window;
+    -webkit-appearance: none;
+    background: #f5f5f5 url("/images/arrow_down.png") right center no-repeat;
+    padding-right: 20px;
+}
 
   select:hover {
       cursor: pointer;
@@ -154,12 +163,13 @@ label {
 .petSearch {
     background-image: linear-gradient(to right,rgba(255, 214, 153, 0.3),rgba(255, 184, 77, 0.3)), url(images/dog-paws.jpg);
     background-size: cover;
-    height: 350px;
-    width: 400px;
+    height: 400px;
+    width: 900px;
     display: inline-block;
-    margin-top: 15vh;
+    margin-top: 12vh;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 55vh;
     text-align: center; 
     border-radius: 6px;  
 }
@@ -203,6 +213,69 @@ label {
     font-family: 'Poppins', sans-serif;
 }
 
+.searchForm {
+    display: none;
+}
+
+.searchSubmitButton {
+    padding: 4px;
+    border-color: #E96435;
+    border-radius: 6px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 15px;
+    background-color: #E96435;
+    color: white;
+    margin-left: 10px;
+}
+
+.searchSubmitButton:hover {
+    cursor: pointer;
+}
+
+select#searchSize {
+    width: 90px;
+}
+select#searchAge {
+    width: 90px;
+}
+select#searchGender {
+    width: 90px;
+}
+.searchPageCategories{
+    width: 90px;
+    height: 30px;
+    opacity: 0.9;
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    position: relative;
+  }
+  .selectSearchPage {
+    text-align: left;
+    padding-left: 4px;
+  }
+  .searchPageCategories:hover {
+      cursor: pointer;
+  }
+  .searchPageCategories .selectSearchPage select{
+    font-family: 'Poppins', sans-serif;
+    background: transparent;
+    line-height: 1;
+    border: 0;
+    padding: 0;
+    border-radius: 0;
+    position: relative;
+    z-index: 10;
+    font-size: 1em;
+  }
+
 
 @media screen and (min-width: 650px) {
     .results {
@@ -220,7 +293,7 @@ label {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background-color: #F7E4A8;
+    background-color: #143D47;
     font-family: 'Poppins', sans-serif;
 }
 
@@ -248,13 +321,10 @@ label {
     color: black;
 }
 
-
 .btn1:hover,.btn2:hover,.btn3:hover {
     background-color: #143D47;
     color: #12BB97;
 }
-
-
 
 .extraClass {
     font-size: 100px;
@@ -265,7 +335,6 @@ label {
     height: 100vh;
     background-color: darkgrey;
 }
-
 .pet-quiz {
     height: 100vh;
     background-color: lightgray;
@@ -281,17 +350,13 @@ label {
     background-color: #E96435;
 }
 
-.contact-us {
-    height: 100vh;
-    background-color: #143D47;
-}
 
 .contact-form {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -299,11 +364,12 @@ label {
     font-family: 'Acme' , sans-serif;
     color: black;
     overflow-x: hidden;
+    background-color: #143D47;
 }
 
 .contact-form h2 {
     text-align: center;
-    color: white;
+    color: Black;
     font-size: 40px;
 }
 
@@ -311,7 +377,7 @@ label {
     height: 100px;
     width: 670px;
     justify-content: center;
-    background-color: lightgray;
+    background-color: #12BB97;
     color: black;
     opacity: 0.5;
     padding: 15px;
@@ -378,4 +444,8 @@ input[type=button], input[type=submit], input[type=reset] {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.footer {
+    height:20vh;
 }
