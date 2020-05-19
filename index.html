@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Hachiko</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Muli:wght@600&family=Numans&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -15,7 +17,7 @@
   <body>
     
     
-    <nav>
+    <!-- <nav>
       <div class="logo">
         <img src="./images/logo.png">
         </div>
@@ -26,7 +28,7 @@
           <li class="searchPage">
               <a href="#">Search</a>
           </li>
-          <li>
+          <li class="aboutHachiko">
               <a href="#">About Hachikō</a>
           </li>
         </ul>
@@ -36,7 +38,18 @@
           <div class="line3"></div>
         
       </div>
+    </nav> -->
+    <nav class="nav" id="topNav">
+     <a href="#" class="logo"><img src="./images/logo.png"></a>
+      <a href="#" class="home">Home</a>
+      <a href="#" class="aboutHachiko">About Hachiko</a>
+      <a href="#" class="searchPage">Search</a>
+      <a href="#contact" class="contact">Contact</a>
+      <div class="iconToggle">
+      <a href="javascript:void(0);" style="font-size:38px;" class="icon" onclick="navDrop()"><i class="fas fa-bars"></i></a>
+      </div>
     </nav>
+    
 
     <section class="landing">
       <form class="petSearch">
@@ -228,22 +241,49 @@
     <div class="bottom">
     
     <section class="three-box">
-    <div class=container></div>
-      <div>
+    <div class="container center-text"></div>
+      <div class="center-text">
         <p><i class="fas fa-bone extraClass"></i></p>
         <button class="btn btn1">Find Your Pet</button>
       </div>
-      <div>
+      <div class="center-text">
         <p><i class="fas fa-cat extraClass"></i></p>
         <button class="btn btn2">Take The Quiz!</button>
       </div>
-      <div>
+      <div class="center-text">
         <p><i class="fas fa-paw extraClass"></i></p>
         <button class="btn btn3">More about Hachikō</button>
       </div>  
     </section>
 
-    <section class="pic-collage">
+    <!-- Collage -->
+    <section id="collage">
+      <div class="parent">
+        <div class="div1"><img class="collage-img" src="images/test_img/img-1.jpg" alt="test images"> </div>
+        <div class="div2"><img class="collage-img" src="images/test_img/img-2.jpg" alt="test images"> </div>
+        <div class="div3"><img class="collage-img" src="images/test_img/img-3.jpg" alt="test images"> </div>
+        <div class="div4"><img class="collage-img" src="images/test_img/img-4.jpg" alt="test images"> </div>
+        <div class="div5"><img class="collage-img" src="images/test_img/img-5.jpg" alt="test images"> </div>
+        <div class="div6"><img class="collage-img" src="images/test_img/img-6.jpg" alt="test images"> </div>
+        <div class="div7"><img class="collage-img" src="images/test_img/img-4x6.jpg"> </div>
+        <div class="div8">
+          <h2 class="collage-heading">Excepteur sint occaeuiecat cupidatat</h2>
+          <p class="collage-text">Culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
+            iste natus error sit voluptartem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+            illo inventore veritatis et quasi ropeior architecto beatae vitae dicta sunt explicabo. Nemo eniem ipsam
+            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eosep
+            quiklop ratione voluptatem sequi nesciunt. Neque porro quisquam est, quepi dolorem ipsum quia dolor srit
+            amet, consectetur adipisci velit, seid quia non numquam eiuris modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat iope voluptatem.
+          </p>
+        </div>
+        <div class="div9">
+          <p class="collage-text">Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in tufpoy
+            voluptate velit esse cillum dolore eu fugiat nulla parieratur. Excepteur sint occaecat cupidatat.</p>
+        </div>
+      </div>
 
     </section>
 
@@ -271,8 +311,17 @@
   </section>
 
 <section class="footer"></section>
-
-
+    <!-- script for responsive hamburger nav -->
+    <script>
+      function navDrop() {
+      let x = document.getElementById("topNav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+    </script>
     <script src="search.js"></script>
   </body>
 </html>
