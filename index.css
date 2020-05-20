@@ -209,7 +209,7 @@ li.aboutHachiko {
     text-align: center;
 }
 
-.landingLabel {
+label.landingLabel {
     font-family: 'Poppins', sans-serif;
     color: #143D47;
     font-size: 20px;
@@ -255,7 +255,7 @@ li.aboutHachiko {
 form.petSearch {
     background-image: linear-gradient(to right,rgba(255, 214, 153, 0.3),rgba(255, 184, 77, 0.3)), url(images/dog-paws.jpg);
     background-size: cover;
-    height: 400px;
+    height: 350px;
     width: 400px;
     display: inline-block;
     margin-top: 12vh;
@@ -554,7 +554,7 @@ input[type=text], select, textarea{
     font-family: 'Poppins', sans-serif;
   }
   
-  label {
+  label.contactLabel {
     padding: 8px 8px 8px 0px;
     display: inline-block;
     color: white;
