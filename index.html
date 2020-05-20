@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width">
     <title>Hachiko - Home</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Muli:wght@600&family=Numans&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script
     src="https://code.jquery.com/jquery-3.2.1.min.js"
@@ -15,7 +17,7 @@
   <body>
     
     
-    <nav>
+    <!-- <!-- <nav> -->
       <div class="logo">
         <img src="./images/logo.png">
         </div>
@@ -23,10 +25,10 @@
           <li class="home">
               <a href="index.html">Home</a>
           </li>
-          <li>
+          <li class="searchPage">
               <a href="#">Search</a>
           </li>
-          <li>
+          <li class="aboutHachiko">
               <a href="about.html">About Hachikō</a>
           </li>
         </ul>
@@ -36,15 +38,22 @@
           <div class="line3"></div>
         
       </div>
+    </nav> -->
+    <nav class="nav" id="topNav">
+     <a href="#" class="logo"><img src="./images/logo.png"></a>
+      <a href="#" class="home">Home</a>
+      <a href="#" class="aboutHachiko">About Hachiko</a>
+      <a href="#" class="searchPage">Search</a>
+      <a href="#contact" class="contact">Contact</a>
+      <div class="iconToggle">
+      <a href="javascript:void(0);" style="font-size:38px;" class="icon" onclick="navDrop()"><i class="fas fa-bars"></i></a>
+      </div>
     </nav>
+ 
 
-
-
-  
-    
     <section class="landing">
       <form class="petSearch">
-        <label for="types">Type of Animal</label>
+        <label for="types" class="landingLabel">Type of Animal</label>
         <div class= "searchCategories">
         <div class="select">
         <select id="types">
@@ -57,7 +66,7 @@
         </select>
       </div>
       </div>
-        <label for="locations">Location</label>
+        <label for="locations" class="landingLabel">Location</label>
         <div class= "searchCategories">
         <div class="select">
         <select id="locations">
@@ -117,65 +126,213 @@
         <button class="submitButton" type="submit" value="Search">Search</button>
       </form>    
     </section>
-    <section class="results hidden"></section>
+    
+    <div class="searchResultsPage">
+    <form class="searchForm">
+      <div class= "searchPageCategories">
+      <div class="selectSearchPage">
+      <select id="searchTypes">
+        <option value="null">Type</option>
+        <option value="Dog">Dog</option>
+        <option value="Cat">Cat</option>
+        <option value="Rabbit">Rabbit</option>
+        <option value="Horse">Horse</option>
+        <option value="Bird">Bird</option>
+        <option value="Barnyard">Barnyard Animals</option>
+      </select>
+    </div>
+    </div>
+      <div class= "searchPageCategories">
+      <div class="selectSearchPage">
+        
+      <select id="searchLocations">
+        <option value="null">Location</option>
+        <option value="Alabama">Alabama</option>
+        <option value="Alaska">Alaska</option>
+        <option value="Arizona">Arizona</option>
+        <option value="Arkansas">Arkansas</option>
+        <option value="California">California</option>
+        <option value="Colorado">Colorado</option>
+        <option value="Connecticut">Connecticut</option>
+        <option value="Delaware">Delaware</option>
+        <option value="Florida">Florida</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Hawaii">Hawaii</option>
+        <option value="Idaho">Idaho</option>
+        <option value="Illinois">Illinois</option>
+        <option value="Indiana">Indiana</option>
+        <option value="Iowa">Iowa</option>
+        <option value="Kansas">Kansas</option>
+        <option value="Kentucky">Kentucky</option>
+        <option value="Louisiana">Louisiana</option>
+        <option value="Maine">Maine</option>
+        <option value="Maryland">Maryland</option>
+        <option value="Massachusetts">Massachusetts</option>
+        <option value="Michigan">Michigan</option>
+        <option value="Minnesota">Minnesota</option>
+        <option value="Mississippi">Mississippi</option>
+        <option value="Missouri">Missouri</option>
+        <option value="Montana">Montana</option>
+        <option value="Nebraska">Nebraska</option>
+        <option value="Nevada">Nevada</option>
+        <option value="New Hampshire">New Hampshire</option>
+        <option value="New Jersey">New Jersey</option>
+        <option value="New Mexicoy">New Mexico</option>
+        <option value="New York">New York</option>
+        <option value="North Carolina">North Carolina</option>
+        <option value="North Dakota">North Dakota</option>
+        <option value="Ohio">Ohio</option>
+        <option value="Oklahoma">Oklahoma</option>
+        <option value="Oregon">Oregon</option>
+        <option value="Pennsylvania">Pennsylvania</option>
+        <option value="Rhode Island">Rhode Island</option>
+        <option value="South Carolina">South Carolina</option>
+        <option value="South Dakota">South Dakota</option>
+        <option value="Tennessee">Tennessee</option>
+        <option value="Texas">Texas</option>
+        <option value="Utah">Utah</option>
+        <option value="Vermont">Vermont</option>
+        <option value="Virginia">Virginia</option>
+        <option value="Washington">Washington</option>
+        <option value="West Virginia">West Virginia</option>
+        <option value="Wisconsin">Wisconsin</option>
+        <option value="Wyoming">Wyoming</option>
+      </select>
+      </div>
+      </div>
+      <div class= "searchPageCategories">
+        <div class="selectSearchPage">
+        <select id="searchSize">
+          <option value="null">Size</option>
+          <option value="small">Small</option>
+          <option value="medium">Medium</option>
+          <option value="large">Large</option>
+          <option value="xlarge">Extra Large</option>
+        </select>
+      </div>
+      </div>
+      <div class= "searchPageCategories">
+        <div class="selectSearchPage">
+        <select id="searchGender">
+          <option value="null">Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+      </div>
+      <div class= "searchPageCategories">
+        <div class="selectSearchPage">
+        <select id="searchAge">
+          <option value="null">Age</option>
+          <option value="baby">Baby</option>
+          <option value="young">Young</option>
+          <option value="adult">Adult</option>
+          <option value="senior">Senior</option>
+        </select>
+      </div>
+      </div>
+      <button class="searchSubmitButton" type="submit" value="Search">Search</button>
+      </form>
+    <section class="results">
+    </section>
+  </div>
 
 
     <div class="bottom">
     
     <section class="three-box">
-    <div class=container></div>
-      <div>
+    <div class="container center-text"></div>
+      <div class="center-text">
         <p><i class="fas fa-bone extraClass"></i></p>
         <button class="btn btn1">Find Your Pet</button>
       </div>
-      <div>
+      <div class="center-text">
         <p><i class="fas fa-cat extraClass"></i></p>
         <button class="btn btn2">Take The Quiz!</button>
       </div>
-      <div>
+      <div class="center-text">
         <p><i class="fas fa-paw extraClass"></i></p>
         <button class="btn btn3">More about Hachikō</button>
       </div>  
     </section>
 
-    <section class="pic-collage">
-
-    </section>
-
-<<<<<<< HEAD
-    <section class="contact-form">
-      <h2 id="contact">We Want To Hear From You!</h2>
-      <div>
-          <p>We would love to hear from you! Drop us a line down below, and we will get back to you ASAP!</p>
+    <!-- Collage -->
+    <section id="collage">
+      <div class="parent">
+        <div class="div1"><img class="collage-img" src="images/test_img/img-1.jpg" alt="test images"> </div>
+        <div class="div2"><img class="collage-img" src="images/test_img/img-2.jpg" alt="test images"> </div>
+        <div class="div3"><img class="collage-img" src="images/test_img/img-3.jpg" alt="test images"> </div>
+        <div class="div4"><img class="collage-img" src="images/test_img/img-4.jpg" alt="test images"> </div>
+        <div class="div5"><img class="collage-img" src="images/test_img/img-5.jpg" alt="test images"> </div>
+        <div class="div6"><img class="collage-img" src="images/test_img/img-6.jpg" alt="test images"> </div>
+        <div class="div7"><img class="collage-img" src="images/test_img/img-4x6.jpg"> </div>
+        <div class="div8">
+          <h2 class="collage-heading">Excepteur sint occaeuiecat cupidatat</h2>
+          <p class="collage-text">Culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
+            iste natus error sit voluptartem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
+            illo inventore veritatis et quasi ropeior architecto beatae vitae dicta sunt explicabo. Nemo eniem ipsam
+            voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eosep
+            quiklop ratione voluptatem sequi nesciunt. Neque porro quisquam est, quepi dolorem ipsum quia dolor srit
+            amet, consectetur adipisci velit, seid quia non numquam eiuris modi tempora incidunt ut labore et dolore
+            magnam aliquam quaerat iope voluptatem.
+          </p>
+        </div>
+        <div class="div9">
+          <p class="collage-text">Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in tufpoy
+            voluptate velit esse cillum dolore eu fugiat nulla parieratur. Excepteur sint occaecat cupidatat.</p>
+        </div>
       </div>
-      <form>
-          <div class="test">
-              <div class="testOne">
-                  <input type="text" id="name" name="name" placeholder="Name">
-                  <br>
-                  <input type="text" id="email" name="email" placeholder="Email">
-                  <br>
-                  <input type="text" id="subject" name="subject" placeholder="Subject"> 
-              </div>
-              <div class="testTwo">
-                  <textarea id="comments" name="comments" placeholder="Your message here..." style="height:200px"></textarea>
-              <br>
-                  <input type="submit" value="Send">
-              </div>
-          </div>
-      </form> 
-  </section>
-=======
-    <section class="contact-us">
-      
-    </section>
-  </div>
 
->>>>>>> aab93b7f4aa66514624448d3d7d20663c28e2223
+    </section>
+
+    <div class="contact-us">
+      <h3>Contact Us:</h3>
+      <form action="action_page.php">
+        <div class="row">
+          <div class="col-25">
+            <label for="fname" class="contactLabel">First Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="lname" class="contactLabel">Last Name</label>
+          </div>
+          <div class="col-75">
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-25">
+            <label for="subject" class="contactLabel">Subject</label>
+          </div>
+          <div class="col-75">
+            <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+          </div>
+        </div>
+        <div class="row">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+    </div>
+
 
 <section class="footer"></section>
-
-
+    <!-- script for responsive hamburger nav -->
+    <script>
+      function navDrop() {
+      let x = document.getElementById("topNav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+    </script>
     <script src="search.js"></script>
   </body>
 </html>
