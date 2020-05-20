@@ -55,7 +55,7 @@ nav {
         width: 60%;
     }
 }
-@media screen and (max-width:768px){
+@media screen and (max-width:1768px){
    body{
        overflow-x: hidden;
    }
@@ -78,7 +78,6 @@ nav {
     .burger{
         display: block;
         cursor: pointer;
-
     }
 }
 .nav-active {
@@ -112,12 +111,12 @@ ul {
 
 .landing {
     height: 70vh; 
-    background-color: #464655;
+    background-color: #143D47;
     display: block;
     text-align: center;
 }
 
-label {
+.landingLabel {
     font-family: 'Poppins', sans-serif;
     color: #143D47;
     font-size: 20px;
@@ -137,6 +136,12 @@ label {
     border-radius: 6px;
     position: relative;
   }
+  select {
+    -moz-appearance: window;
+    -webkit-appearance: none;
+    background: #f5f5f5 url("/images/arrow_down.png") right center no-repeat;
+    padding-right: 20px;
+}
 
   select:hover {
       cursor: pointer;
@@ -229,6 +234,8 @@ label {
     color: #fff;
 }
 
+
+
 .about-us {
     height: 100vh;
     background-color: darkgrey;
@@ -247,6 +254,7 @@ label {
     height: 100vh;
     background-color: #E96435;
 }
+
 
 /* Contact Us */
 .contact-us {
@@ -277,6 +285,7 @@ input[type=text], select, textarea{
     display: inline-block;
     color: white;
     margin: 50px 5px 5px 15px;
+    font-family: 'Poppins', sans-serif;
   }
   
   input[type=submit] {
