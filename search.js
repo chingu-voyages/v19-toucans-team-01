@@ -90,9 +90,10 @@ data.map((i) => {
   $('.bottom').hide();
   homeRender();
 }
+
 //builds the fetch url based off of type of animal and state of location
 function buildUrl(type, location) {
-  let rootUrl = 'https://api.petfinder.com/v2/animals?type=' + type + '&status=adoptable' + '&location=' + location;
+  let rootUrl = 'https://api.petfinder.com/v2/animals?type=' + type + '&status=adoptable' + '&limit=100' + '&page=1' + '&location=' + location;
 return rootUrl;
 }
 
@@ -108,22 +109,35 @@ function getValues() {
   }) 
 }
 
-//gets values from search page form.. size, gender, age
+//gets values from search page form, search, and reset
  function getSearchPageValues() {
   $('.searchForm').submit(event => {
     event.preventDefault();
     let type = $('#searchTypes').val();
+    let dogBreed = $('#searchDogBreeds').val();
+    let catBreed = $('#searchCatBreeds').val();
+    let rabbitBreed = $('#searchRabbitBreeds').val();
+    let horseBreed = $('#searchHorseBreeds').val();
+    let birdBreed = $('#searchBirdBreeds').val();
     let location = $('#searchLocations').val();
     let size = $('#searchSize').val();
     let gender = $('#searchGender').val();
     let age = $('#searchAge').val();
-    let fetchUrl = buildUrl(type, location);
+    let fetchUrl = 'https://api.petfinder.com/v2/animals?'
+    type == 'null' ? fetchUrl+='': fetchUrl += '&type=' + type;
+    location == 'null' ? fetchUrl+='': fetchUrl += '&location=' + location;
+    dogBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + dogBreed;
+    catBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + catBreed;
+    rabbitBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + rabbitBreed;
+    horseBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + horseBreed;
+    birdBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + birdBreed;
     size == 'null' ? fetchUrl += '': fetchUrl += '&size=' + size;
     gender == 'null' ? fetchUrl +='': fetchUrl += '&gender=' + gender ;
     age == 'null' ? fetchUrl+='': fetchUrl += '&age=' + age;
-    type =='null' || location =='null'?
-      alert("Please select a type of animal and location.") :
     fetchAnimals(fetchUrl);
+    $('.searchForm').each(function(){
+      this.reset();
+  });
   }) 
  }
 
@@ -134,8 +148,53 @@ function toggleNav() {
 });
 }
 
+//creates dropdowns for all types of breeds for each animal
+function breeds() { 
+  let dogBreedList = STORE.dogBreeds.map((i) => {
+      return i.name;
+  })
+  let catBreedList = STORE.catBreeds.map((i) => {
+    return i.name;
+  })
+  let birdBreedList = STORE.birdBreeds.map((i) => {
+    return i.name;
+  })
+  let rabbitBreedList = STORE.rabbitBreeds.map((i) => {
+    return i.name;
+  })
+  let horseBreedList = STORE.horseBreeds.map((i) => {
+    return i.name;
+  })
+dogBreedList.map((i) => {
+      $('#searchDogBreeds').append(`
+      <option value="${i}">${i}</option>
+      `)
+  })
+ catBreedList.map((i) => {
+   $('#searchCatBreeds').append(`
+   <option value="${i}">${i}</option>
+   `)
+ }) 
+ birdBreedList.map((i) => {
+  $('#searchBirdBreeds').append(`
+  <option value="${i}">${i}</option>
+  `)
+}) 
+rabbitBreedList.map((i) => {
+  $('#searchRabbitBreeds').append(`
+  <option value="${i}">${i}</option>
+  `)
+}) 
+horseBreedList.map((i) => {
+  $('#searchHorseBreeds').append(`
+  <option value="${i}">${i}</option>
+  `)
+}) 
+}
+
 //run all search functionality
 $(function() {
+  breeds()
   toggleNav()
   homeRender()
   searchRender()
@@ -144,28 +203,5 @@ $(function() {
 });
 
 
-// const navSlide = () => {
-//   const burger = document.querySelector('.burger');
-//   const nav = document.querySelector('.nav-links');
-//   const navLinks = document.querySelectorAll('.nav-links li');
 
-//   burger.addEventListener('click',()=>{
-//       //Toggle Nav
-//       nav.classList.toggle('nav-active');
-
-//      //Animate LInks
-//     navLinks.forEach((link, index) => {
-//          if (link.style.animation) {
-//              link. style.animation = ''
-//          } else {
-//      link.style.animation = `navLinkFade 0.5s ease forwards ${index / 7 + 0.3}s`;
-//     }
-//   });
-// //Burger animation
-// burger.classList.toggle('toggle');
-
-//  });
-// }
-
-// navSlide();
 
