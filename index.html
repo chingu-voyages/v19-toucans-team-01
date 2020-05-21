@@ -15,30 +15,7 @@
     crossorigin="anonymous"></script>
   </head>
   <body>
-    
-    
-    <!-- <nav>
-      <div class="logo">
-        <img src="./images/logo.png">
-        </div>
-        <ul class="nav-links">
-          <li class="home">
-              <a href="#">Home</a>
-          </li>
-          <li class="searchPage">
-              <a href="#">Search</a>
-          </li>
-          <li class="aboutHachiko">
-              <a href="#">About Hachikō</a>
-          </li>
-        </ul>
-        <div class="burger">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
-        
-      </div>
-    </nav> -->
+    <!-- nav bar -->
     <nav class="nav" id="topNav">
      <a href="#" class="logo"><img src="./images/logo.png"></a>
       <a href="#" class="home">Home</a>
@@ -50,7 +27,7 @@
       </div>
     </nav>
  
-
+<!-- landing page -->
     <section class="landing">
       <form class="petSearch">
         <label for="types" class="landingLabel">Type of Animal</label>
@@ -127,6 +104,7 @@
       </form>    
     </section>
     
+    <!-- search results page -->
     <div class="searchResultsPage">
     <form class="searchForm">
       <div class= "searchPageCategories">
@@ -142,9 +120,43 @@
       </select>
     </div>
     </div>
+    <div class= "searchPageCategories">
+      <div class="selectSearchPage">
+      <select id="searchDogBreeds">
+        <option value="null">Dog Breed</option>
+      </select>
+    </div>
+    </div>
+    <div class= "searchPageCategories">
+      <div class="selectSearchPage">
+      <select id="searchCatBreeds">
+        <option value="null">Cat Breed</option>
+      </select>
+    </div>
+    </div>
+    <div class= "searchPageCategories">
+      <div class="selectSearchPage">
+      <select id="searchBirdBreeds">
+        <option value="null">Bird Breed</option>
+      </select>
+    </div>
+    </div>
+    <div class= "searchPageCategories">
+      <div class="selectSearchPage">
+      <select id="searchRabbitBreeds">
+        <option value="null">Rabbit Breed</option>
+      </select>
+    </div>
+    </div>
+    <div class= "searchPageCategories">
+      <div class="selectSearchPage">
+      <select id="searchHorseBreeds">
+        <option value="null">Horse Breed</option>
+      </select>
+    </div>
+    </div>
       <div class= "searchPageCategories">
       <div class="selectSearchPage">
-        
       <select id="searchLocations">
         <option value="null">Location</option>
         <option value="Alabama">Alabama</option>
@@ -237,7 +249,7 @@
     </section>
   </div>
 
-
+<!-- bottom of landing page -->
     <div class="bottom">
     
     <section class="three-box">
@@ -286,7 +298,7 @@
       </div>
 
     </section>
-
+<!-- contact form -->
     <div class="contact-us">
       <h3>Contact Us:</h3>
       <form action="action_page.php">
@@ -333,6 +345,7 @@
       }
     }
     </script>
+    <script src="breedList.js"></script>
     <script src="search.js"></script>
   </body>
 </html>
