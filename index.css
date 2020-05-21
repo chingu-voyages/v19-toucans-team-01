@@ -28,122 +28,24 @@ p {
 
 /* Navigation bar */
 
-/* nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #12BB97;
-    font-family: 'Poppins', sans-serif;
-}
-
-.nav-links {
-    display: flex;
-    justify-content: space-evenly;
-    width: 200%;
-}
-.nav-links li {
-    list-style: none;
-    padding-right: 10px;
-}
-li.aboutHachiko {
-    text-align: center;
-}
- .nav-links a {
-    color: white;
-    text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
-} */
-
-
-/* Collapsed Menu */
-
-/* .burger {
-    display: none;
-}
-.burger div{
-    width: 25px;
-    height: 5px;
-    background-color: black;
-    margin: 5px;
-    transition: all 0.3s ease;
-} */
-
-/* @media screen and (max-width: 1024px){
-    .nav-links{
-         width: 60%;
-     }
- } */
- /* @media screen and (max-width:768px){
-    body{
-        overflow-x: hidden;
-    }
-     .nav-links{
-         position: absolute;
-         right: 0px;
-         height: 92vh;
-         top: 8vh;
-         background-color: #12BB97;
-         display: flex;
-         flex-direction: column;
-         align-items: center;
-         width: 50%;
-         transform: translateX(100%);
-         transition: transform 0.5s ease-in;
-     }
-     .nav-links li{
-         opacity: 0;
-     }
-     .burger{
-         display: block;
-         cursor: pointer;
- 
-     }
- }
- .nav-active {
-     transform: translateX(0%);
- }
- @keyframes navLinkFade{
-     from{
-         opacity: 0;
-         transform: translateX(50px);
-     }
-     to{
-         opacity: 1;
-         transform: translateX(0px);
-     }
- }
- .toggle .line1{
-     transform: rotate(-45deg) translate(-5px,6px);
- }
- .toggle .line2{
-     opacity: 0;
- }
- .toggle .line3{
-     transform: rotate(45deg) translate(-5px,-6px);
- }
-  */
-  ul {
+ul {
     list-style-type: none;
     text-align: center;
 }
 
- .nav {
+.nav {
     font-family: 'Poppins', sans-serif;
     overflow: hidden;
     background-color: #12BB97;
-  }
+}
 
-  nav.nav a.logo img {
+nav.nav a.logo img {
       padding-top: 0px;
       height: 50px;
       padding-bottom: 0px;
-  }
+}
 
-  .nav a {
+.nav a {
     float: left;
     display: block;
     color: white;
@@ -151,55 +53,14 @@ li.aboutHachiko {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
-  }
-
-  .nav .icon {
-    display: none;
-  }
-
-  .nav a.logo img {
-    float: left;
 }
 
-  @media screen and (max-width: 600px) {
-    .nav a:not(:first-child) {
-      display: none;
-    }
-    .nav a.icon {
-      float: right;
-      display: block;
-    }
-  }
-  
-  @media screen and (max-width: 600px) {
-    .nav a.home:hover, 
-    .nav a.aboutHachiko:hover, 
-    .nav a.searchPage:hover,
-    .nav a.contact:hover, 
-    a.icon:hover {
-      background-color: #90D49F;
-      color: white;
-    }
-    .nav.responsive {
-        position: relative;
-        float: none;
-        display: block;
-        width: 100%;
-        text-align: right;
-    }
-    .nav.responsive .icon {
-      position: absolute;
-      right: 0;
-      top: 0;
-    }
-    .nav.responsive a {
-      float: none;
-      display: block;
-      text-align: right;
-    }
-    .nav.responsive a.home {
-        margin-top: 70px;
-    }
+.nav .icon {
+    display: none;
+}
+
+.nav a.logo img {
+    float: left;
 }
 
 .landing {
@@ -217,6 +78,7 @@ label.landingLabel {
     padding: 20px;
     font-weight: bold;
 }
+
 .searchCategories{
     width: 140px;
     opacity: 0.9;
@@ -283,7 +145,6 @@ form.petSearch {
     cursor: pointer;
 }
 
-
 .resultCard{
     background-color: #F7E4A8;
     width: 350px;
@@ -308,8 +169,13 @@ form.petSearch {
 form.searchForm {
     display: none;
 }
+.searchForm {
+    display: flex;
+    flex-direction: column;
+}
 
 .searchSubmitButton {
+    width: 100px;
     padding: 4px;
     border-color: #E96435;
     border-radius: 6px;
@@ -324,17 +190,21 @@ form.searchForm {
     cursor: pointer;
 }
 
-select#searchSize {
-    width: 90px;
+select#searchSize, 
+select#searchAge,
+select#searchGender,
+select#searchDogBreeds,
+select#searchCatBreeds,
+select#searchBirdBreeds,
+select#searchRabbitBreeds,
+select#searchHorseBreeds,
+select#searchTypes,
+select#searchLocations {
+    width: 250px;
 }
-select#searchAge {
-    width: 90px;
-}
-select#searchGender {
-    width: 90px;
-}
+
 .searchPageCategories{
-    width: 90px;
+    width: 250px;
     height: 30px;
     opacity: 0.9;
     font-size: 13px;
@@ -344,18 +214,21 @@ select#searchGender {
     margin-left: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 6px;
+    border-bottom: 1px solid #ccc;
     position: relative;
   }
   .selectSearchPage {
     text-align: left;
     padding-left: 4px;
+    width: 120px;
   }
-  .searchPageCategories:hover {
+  div.searchPageCategories:hover {
       cursor: pointer;
   }
+  div.selectSearchPage:hover {
+      cursor: pointer;
+  }
+  
   .searchPageCategories .selectSearchPage select{
     font-family: 'Poppins', sans-serif;
     background: transparent;
@@ -368,29 +241,6 @@ select#searchGender {
     font-size: 1em;
   }
 
-
-  @media screen and (max-width: 649px) {
-      .searchResultsPage {
-          display: flex;
-          flex-direction: row;
-      }
-      .searchForm {
-          flex-direction: column;
-          max-width: 100px;
-          margin-right: 50px;
-      }
-  }
-
-@media screen and (min-width: 650px) {
-    .results {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-}
-
-
-
 .three-box {
     height: 60vh;
     display: flex;
@@ -400,8 +250,6 @@ select#searchGender {
     background-color: #143D47;
     font-family: 'Poppins', sans-serif;
 }
-
-
 
 .center-text {
     text-align: center;
@@ -588,14 +436,70 @@ input[type=text], select, textarea{
     display: table;
     clear: both;
   }
-  
-  @media screen and (max-width: 600px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
-  
+   
 .footer {
     height:20vh;
 }
+
+
+  @media screen and (max-width: 649px) {
+    .searchResultsPage {
+        display: flex;
+        flex-direction: row;
+    }
+    .searchForm {
+        flex-direction: column;
+        max-width: 100px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (min-width: 650px) {
+  .results {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    .nav a:not(:first-child) {
+      display: none;
+    }
+    .nav a.icon {
+      float: right;
+      display: block;
+    }
+    .nav a.home:hover, 
+    .nav a.aboutHachiko:hover, 
+    .nav a.searchPage:hover,
+    .nav a.contact:hover, 
+    a.icon:hover {
+      background-color: #90D49F;
+      color: white;
+    }
+    .nav.responsive {
+        position: relative;
+        float: none;
+        display: block;
+        width: 100%;
+        text-align: right;
+    }
+    .nav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .nav.responsive a {
+      float: none;
+      display: block;
+      text-align: right;
+    }
+    .nav.responsive a.home {
+        margin-top: 70px;
+    }
+  }
