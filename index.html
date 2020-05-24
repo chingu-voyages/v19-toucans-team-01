@@ -101,6 +101,7 @@
         </div>
         </div>
         <button class="submitButton" type="submit" value="Search">Search</button>
+        
       </form>    
     </section>
     
@@ -120,36 +121,21 @@
       </select>
     </div>
     </div>
+    <div class="hiddenSearchPageCategories">
     <div class= "searchPageCategories">
       <div class="selectSearchPage">
       <select id="searchDogBreeds">
         <option value="null">Dog Breed</option>
       </select>
-    </div>
-    </div>
-    <div class= "searchPageCategories">
-      <div class="selectSearchPage">
       <select id="searchCatBreeds">
         <option value="null">Cat Breed</option>
       </select>
-    </div>
-    </div>
-    <div class= "searchPageCategories">
-      <div class="selectSearchPage">
       <select id="searchBirdBreeds">
         <option value="null">Bird Breed</option>
       </select>
-    </div>
-    </div>
-    <div class= "searchPageCategories">
-      <div class="selectSearchPage">
       <select id="searchRabbitBreeds">
         <option value="null">Rabbit Breed</option>
       </select>
-    </div>
-    </div>
-    <div class= "searchPageCategories">
-      <div class="selectSearchPage">
       <select id="searchHorseBreeds">
         <option value="null">Horse Breed</option>
       </select>
@@ -243,15 +229,18 @@
           </select>
         </div>
       </div>
-      <button class="submitButton" type="submit" value="Search">Search</button>
+      <button class="searchSubmitButton" type="submit" value="Search">Search</button>
+      <div class="spinner"></div> 
     </form>
-  <section class="results">
+  </div>
+  <section id="results">
+    
   </section>
 </div>
 
 <!-- bottom of landing page -->
     <div class="bottom">
-    
+      
     <section class="three-box">
       <div class="container center-text"></div>
       <div class="center-text">
@@ -266,6 +255,7 @@
         <p><i class="fas fa-paw extraClass"></i></p>
         <button class="btn btn3">More about Hachikō</button>
       </div>
+      <div class="spinner"></div>
     </section>
 
     <!-- Collage -->
