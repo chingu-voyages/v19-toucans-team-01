@@ -63,6 +63,8 @@ nav.nav a.logo img {
     float: left;
 }
 
+/* landing page */
+
 .landing {
     height: 70vh; 
     background-color: #143D47;
@@ -80,6 +82,7 @@ label.landingLabel {
 }
 
 .searchCategories{
+    background-color: cornsilk;
     width: 140px;
     opacity: 0.9;
     margin-left: auto;
@@ -145,9 +148,11 @@ form.petSearch {
     cursor: pointer;
 }
 
+/* results page */
+
 .resultCard{
     background-color: #F7E4A8;
-    width: 350px;
+    width: 270px;
     padding: 15px;
     margin-right: auto;
     margin-left: auto;
@@ -162,16 +167,12 @@ form.petSearch {
     border-radius: 6px;
 }
 
-.results {
+#results {
     font-family: 'Poppins', sans-serif;
 }
 
 form.searchForm {
     display: none;
-}
-.searchForm {
-    display: flex;
-    flex-direction: column;
 }
 
 .searchSubmitButton {
@@ -190,21 +191,43 @@ form.searchForm {
     cursor: pointer;
 }
 
-select#searchSize, 
-select#searchAge,
+select#searchRabbitBreeds {
+    width: 140px;
+}
+select#searchDogBreeds {
+    width: 300px;
+}
+select#searchCatBreeds {
+    width: 260px;
+}
+select#searchBirdBreeds,
+select#searchHorseBreeds,
+select#searchLocations {
+    width: 150px;
+}
+select#searchTypes {
+    width: 120px;
+}
+select#searchSize {
+    width: 80px;
+}
 select#searchGender,
+select#searchAge {
+    width: 50px;
+}
+
 select#searchDogBreeds,
 select#searchCatBreeds,
 select#searchBirdBreeds,
 select#searchRabbitBreeds,
 select#searchHorseBreeds,
-select#searchTypes,
-select#searchLocations {
-    width: 250px;
+.hiddenSearchPageCategories {
+    display: none;
 }
 
 .searchPageCategories{
-    width: 250px;
+    background-color: cornsilk;
+    max-width: 250px;
     height: 30px;
     opacity: 0.9;
     font-size: 13px;
@@ -214,18 +237,18 @@ select#searchLocations {
     margin-left: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
+    border-radius: 10px;
     border-bottom: 1px solid #ccc;
     position: relative;
   }
+
   .selectSearchPage {
     text-align: left;
     padding-left: 4px;
     width: 120px;
   }
-  div.searchPageCategories:hover {
-      cursor: pointer;
-  }
-  div.selectSearchPage:hover {
+
+ .searchPageCategories:hover {
       cursor: pointer;
   }
   
@@ -240,6 +263,18 @@ select#searchLocations {
     z-index: 10;
     font-size: 1em;
   }
+
+p.noResults {
+    display: block;
+    color: red;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}  
+
+/* 3 box section */
 
 .three-box {
     height: 60vh;
@@ -266,6 +301,7 @@ select#searchLocations {
     padding: 10px 20px;
     font-size: 15px;
     margin: 80px 80px 80px 80px;
+    margin: 5px;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     transition: 0.5s;
@@ -441,21 +477,40 @@ input[type=text], select, textarea{
     height:20vh;
 }
 
+/* loading spinner */
 
-  @media screen and (max-width: 649px) {
-    .searchResultsPage {
-        display: flex;
-        flex-direction: row;
+.spinner{
+    visibility: hidden;
+    width: 80px;
+    height: 80px;
+    border: 10px solid #f3f3f3;
+    border-top:10px solid #c2970a;
+    border-radius: 100%;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
     }
-    .searchForm {
-        flex-direction: column;
-        max-width: 100px;
-        margin-right: 50px;
-    }
-}
+  }
+  
+  .spinner.show {
+    visibility: visible;
+  }
+
+  /* media queries  */
 
 @media screen and (min-width: 650px) {
-  .results {
+  #results {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -502,4 +557,11 @@ input[type=text], select, textarea{
     .nav.responsive a.home {
         margin-top: 70px;
     }
+  }
+
+  @media screen and (min-width: 792px) {
+      form.petSearch {
+          width: 700px;
+          height: 420px;
+      }
   }
