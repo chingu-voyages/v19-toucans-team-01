@@ -63,6 +63,8 @@ nav.nav a.logo img {
     float: left;
 }
 
+/* landing page */
+
 .landing {
     height: 70vh; 
     background-color: #143D47;
@@ -80,6 +82,7 @@ label.landingLabel {
 }
 
 .searchCategories{
+    background-color: cornsilk;
     width: 140px;
     opacity: 0.9;
     margin-left: auto;
@@ -145,9 +148,11 @@ form.petSearch {
     cursor: pointer;
 }
 
+/* results page */
+
 .resultCard{
     background-color: #F7E4A8;
-    width: 350px;
+    width: 270px;
     padding: 15px;
     margin-right: auto;
     margin-left: auto;
@@ -162,16 +167,12 @@ form.petSearch {
     border-radius: 6px;
 }
 
-.results {
+#results {
     font-family: 'Poppins', sans-serif;
 }
 
 form.searchForm {
     display: none;
-}
-.searchForm {
-    display: flex;
-    flex-direction: column;
 }
 
 .searchSubmitButton {
@@ -190,21 +191,43 @@ form.searchForm {
     cursor: pointer;
 }
 
-select#searchSize, 
-select#searchAge,
+select#searchRabbitBreeds {
+    width: 140px;
+}
+select#searchDogBreeds {
+    width: 300px;
+}
+select#searchCatBreeds {
+    width: 260px;
+}
+select#searchBirdBreeds,
+select#searchHorseBreeds,
+select#searchLocations {
+    width: 150px;
+}
+select#searchTypes {
+    width: 120px;
+}
+select#searchSize {
+    width: 80px;
+}
 select#searchGender,
+select#searchAge {
+    width: 50px;
+}
+
 select#searchDogBreeds,
 select#searchCatBreeds,
 select#searchBirdBreeds,
 select#searchRabbitBreeds,
 select#searchHorseBreeds,
-select#searchTypes,
-select#searchLocations {
-    width: 250px;
+.hiddenSearchPageCategories {
+    display: none;
 }
 
 .searchPageCategories{
-    width: 250px;
+    background-color: cornsilk;
+    max-width: 250px;
     height: 30px;
     opacity: 0.9;
     font-size: 13px;
@@ -214,18 +237,18 @@ select#searchLocations {
     margin-left: 10px;
     margin-bottom: 10px;
     margin-top: 10px;
+    border-radius: 10px;
     border-bottom: 1px solid #ccc;
     position: relative;
   }
+
   .selectSearchPage {
     text-align: left;
     padding-left: 4px;
     width: 120px;
   }
-  div.searchPageCategories:hover {
-      cursor: pointer;
-  }
-  div.selectSearchPage:hover {
+
+ .searchPageCategories:hover {
       cursor: pointer;
   }
   
@@ -240,6 +263,18 @@ select#searchLocations {
     z-index: 10;
     font-size: 1em;
   }
+
+p.noResults {
+    display: block;
+    color: red;
+    text-align: center;
+    font-size: 30px;
+    margin-top: 100px;
+    text-transform: uppercase;
+    font-weight: bolder;
+}  
+
+/* 3 box section */
 
 .three-box {
     height: 60vh;
@@ -266,6 +301,7 @@ select#searchLocations {
     padding: 10px 20px;
     font-size: 15px;
     margin: 80px 80px 80px 80px;
+    margin: 5px;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
     transition: 0.5s;
@@ -319,9 +355,72 @@ select#searchLocations {
     object-fit: cover;
 }
 
+.parent {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    }
+    
+    .div1 { grid-area: 1 / 1 / 2 / 3; }
+    .div2 { grid-area: 1 / 3 / 2 / 5; }
+    .div3 { grid-area: 1 / 5 / 2 / 7; }
+    .div4 { grid-area: 2 / 1 / 3 / 3; }
+    .div5 { grid-area: 2 / 3 / 3 / 5; }
+    .div6 { grid-area: 2 / 5 / 3 / 7; }
+    .div7 { grid-area: 1 / 7 / 5 / 11;}
+    .div8 { grid-area: 3 / 1 / 5 / 7; }
+
+
 
 /* Contact Us */
 .contact-us {
+    
+
+.collage-heading {
+    font-family: 'Montserrat', sans-serif;
+    padding: 20px 0 30px;
+}
+
+.collage-text {
+padding-right: 20px;
+}
+
+/* Contact Us form */
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    font-family: 'Acme' , sans-serif;
+    color: black;
+    overflow-x: hidden;
+    background-color: #143D47;
+}
+
+.contact-form h2 {
+    text-align: center;
+    color: Black;
+    font-size: 40px;
+}
+
+.contact-form p {
+    height: 100px;
+    width: 670px;
+    justify-content: center;
+    background-color: #12BB97;
+    color: black;
+    opacity: 0.5;
+    padding: 15px;
+    margin-left: 0%;
+    margin-bottom: 3%;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
@@ -384,21 +483,40 @@ input[type=text], select, textarea{
     height:20vh;
 }
 
+/* loading spinner */
 
-  @media screen and (max-width: 649px) {
-    .searchResultsPage {
-        display: flex;
-        flex-direction: row;
+.spinner{
+    visibility: hidden;
+    width: 80px;
+    height: 80px;
+    border: 10px solid #f3f3f3;
+    border-top:10px solid #c2970a;
+    border-radius: 100%;
+    position: fixed;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    margin: auto;
+    animation: spin 1s infinite linear;
+  }
+  
+  @keyframes spin {
+    from {
+        transform: rotate(0deg);
+    } to {
+        transform: rotate(360deg);
     }
-    .searchForm {
-        flex-direction: column;
-        max-width: 100px;
-        margin-right: 50px;
-    }
-}
+  }
+  
+  .spinner.show {
+    visibility: visible;
+  }
+
+  /* media queries  */
 
 @media screen and (min-width: 650px) {
-  .results {
+  #results {
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
@@ -446,3 +564,91 @@ input[type=text], select, textarea{
         margin-top: 70px;
     }
   }
+
+  @media screen and (min-width: 792px) {
+      form.petSearch {
+          width: 700px;
+          height: 420px;
+      }
+  }
+
+  @media only screen and (max-width: 1080px) {
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        }
+        
+        .div1 { grid-area: 1 / 1 / 2 / 2; }
+        .div2 { grid-area: 1 / 2 / 2 / 3; }
+        .div3 { grid-area: 1 / 3 / 2 / 4; }
+        .div4 { grid-area: 2 / 1 / 3 / 2; }
+        .div5 { grid-area: 2 / 2 / 3 / 3; }
+        .div6 { grid-area: 2 / 3 / 3 / 4; }
+        .div7 { grid-area: 3 / 2 / 6 / 4; }
+        .div8 { grid-area: 3 / 1 / 6 / 2; }
+}
+
+@media only screen and (max-width: 792px) {
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(5, auto);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        }
+        
+        .div1 { grid-area: 1 / 1 / 2 / 2; }
+        .div2 { grid-area: 1 / 2 / 2 / 3; }
+        .div3 { grid-area: 2 / 1 / 3 / 2; }
+        .div4 { grid-area: 2 / 2 / 3 / 3; }
+        .div5 { grid-area: 3 / 1 / 4 / 2; }
+        .div6 { grid-area: 3 / 2 / 4 / 3; }
+        .div7 { grid-area: 4 / 2 / 6 / 3; }
+        .div8 { grid-area: 4 / 1 / 6 / 2; }
+
+    .collage-img {
+        object-fit: contain;
+    }
+
+    .collage-heading {
+        font-size: 1em;
+    }
+
+    .collage-text {
+        font-size: .50em;
+    }
+}
+
+@media only screen and (max-width: 411px) { 
+    .parent {
+        display: grid;
+        justify-content: center;
+        grid-template-columns: 400px;
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+        }
+        
+        .div1 { grid-area: 1 / 1 / 2 / 2; }
+        .div2 { grid-area: 2 / 1 / 3 / 2; }
+        .div3 { grid-area: 3 / 1 / 4 / 2; }
+        .div4 { visibility: hidden;}
+        .div5 { visibility: hidden; }
+        .div6 { visibility: hidden; }
+        .div7 { visibility: hidden; }
+        .div8 { grid-area: 4 / 1 / 5 / 2; }
+
+    
+        .collage-heading {
+            font-size: .5em;
+            text-align: center;
+        }
+    
+        .collage-text {
+            font-size: .05em;
+            text-align: center;
+        }
+}
