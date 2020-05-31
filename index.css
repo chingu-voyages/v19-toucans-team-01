@@ -323,7 +323,8 @@ p.noResults {
     color: #fff;
 }
 
-/* About us section */
+
+
 .about-us {
     height: 100vh;
     background-color: darkgrey;
@@ -370,6 +371,12 @@ p.noResults {
     .div6 { grid-area: 2 / 5 / 3 / 7; }
     .div7 { grid-area: 1 / 7 / 5 / 11;}
     .div8 { grid-area: 3 / 1 / 5 / 7; }
+
+
+
+/* Contact Us */
+.contact-us {
+    
 
 .collage-heading {
     font-family: 'Montserrat', sans-serif;
@@ -441,6 +448,7 @@ input[type=text], select, textarea{
     display: inline-block;
     color: white;
     margin: 50px 5px 5px 15px;
+    font-family: 'Poppins', sans-serif;
   }
   
   input[type=submit] {
