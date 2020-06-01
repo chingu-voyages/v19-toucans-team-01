@@ -10,6 +10,7 @@ function homeRender() {
     $('.landing').show();
     $('#results').hide();
     $('.searchForm').hide();
+    $('.searchResultsPage').removeClass('fillForm');
   })
 }
 
@@ -19,6 +20,8 @@ function searchRender() {
     $('.landing').hide();
     $('.bottom').hide();
     $('.searchForm').css('display', 'flex');
+    $('.searchResultsPage').addClass('fillForm');
+    $('section#results').addClass('fillHeight');
   })
 }
 
@@ -58,6 +61,8 @@ function displayResults(data) {
   $('#results').empty();
   $('.searchForm').show();
   $('.searchForm').css('display', 'flex');
+  $('.searchResultsPage').addClass('fillForm');
+  $('section#results').addClass('fillHeight');
 //if the response is empty, render no results found
 data.length === 0 ? $('#results').append(`<p class="noResults">No Results Found</p>`) : 
 //otherwise map through and render lists for each animal
@@ -66,12 +71,11 @@ data.map((i) => {
  //list to render if no photos are provided (it was throwing errors with the api) 
         $('#results').append(`
     <ul class="resultCard" >
-    <li class="petName"><h2>${i.name}</h2></li>
-    <img src='images/noPhoto.jpg' alt='animal' class="imgNotAvail">
+    <li class="petName"><a href=${i.url} target="_blank"><h2>${i.name}</h2></a></li>
+    <a href=${i.url} target="_blank"><img src='images/noPhoto.jpg' alt='animal' class="imgNotAvail"></a>
     <li class="breedType> ${i.breeds.primary}</li>
     <li class="gender">${i.gender}</li>
     <li class="age">${i.age}</li>
-    <li class="linkForMore"><a href=${i.url} target="_blank">More about ${i.name} </a></li>
     <li class="emailLink"><a href='mailto:${i.contact.email}'><em>Email Shelter</em></a></li>
     </ul>
     `)
@@ -79,12 +83,11 @@ data.map((i) => {
   //otherwise render with animal photo
     $('#results').append(`
     <ul class="resultCard" >
-    <li class="petName"><h2>${i.name}</h2></li>
-    <img src='${i.photos[0].medium}' alt='animal' class="animalImg">
+    <li class="petName"><a href=${i.url} target="_blank"><h2>${i.name}</h2></a></li>
+    <a href=${i.url} target="_blank"><img src='${i.photos[0].medium}' alt='animal' class="animalImg"></a>
     <li class="breedType">${i.breeds.primary}</li>
     <li class="gender">${i.gender}</li>
     <li class="age">${i.age}</li>
-    <li class="linkForMore"><a href=${i.url} target="_blank">More about ${i.name} </a></li>
     <li class="emailLink"><a href='mailto:${i.contact.email}'><em>Email Shelter</em></a></li>
     </ul>
     `);

@@ -2,6 +2,8 @@
 #143D47 - Midnight green
 #12BB97 - Mountain meadow
 #FFFAFB - Snow
+#F7E488 - Light Yellow
+#90D49F - Mint
 #E96435 - Flame
 
 Fonts
@@ -66,7 +68,7 @@ nav.nav a.logo img {
 /* landing page */
 
 .landing {
-    height: 70vh; 
+    height: 100vh; 
     background-color: #143D47;
     display: block;
     text-align: center;
@@ -81,41 +83,11 @@ label.landingLabel {
     font-weight: bold;
 }
 
-.searchCategories{
-    background-color: cornsilk;
-    width: 140px;
-    opacity: 0.9;
-    margin-left: auto;
+.searchCategories {
+    max-width: 350px;
     margin-right: auto;
-    font-size: 13px;
-    padding: 10px 8px 10px 14px;
-    background: #fff;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    position: relative;
-  }
-  select {
-    -moz-appearance: window;
-    -webkit-appearance: none;
-    background: #f5f5f5 url("/images/arrow_down.png") right center no-repeat;
-    padding-right: 20px;
+    margin-left: auto;
 }
-
-  select:hover {
-      cursor: pointer;
-  }
-  
-  .searchCategories .select select{
-    font-family: 'Poppins', sans-serif;
-    background: transparent;
-    line-height: 1;
-    border: 0;
-    padding: 0;
-    border-radius: 0;
-    position: relative;
-    z-index: 10;
-    font-size: 1em;
-  }
 
 form.petSearch {
     background-image: linear-gradient(to right,rgba(255, 214, 153, 0.3),rgba(255, 184, 77, 0.3)), url(images/dog-paws.jpg);
@@ -130,6 +102,7 @@ form.petSearch {
     text-align: center; 
     border-radius: 6px;  
 }
+
 .submitButton {
     display: block;
     margin-left: auto;
@@ -150,8 +123,31 @@ form.petSearch {
 
 /* results page */
 
+.fillHeight {
+    height: 100vh;
+    width: 100%;
+    overflow: scroll;
+}
+
+.fillForm {
+   background-color: rgb(241, 233, 189);
+   height: 100vh;
+   width: 100%;
+   overflow: scroll;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #143D47;
+    border-bottom: 1px grey solid;
+}
+
 .resultCard{
-    background-color: #F7E4A8;
+    background-color: white;
     width: 270px;
     padding: 15px;
     margin-right: auto;
@@ -161,59 +157,92 @@ form.petSearch {
     border-radius: 6px;
 }
 
+li.age,
+li.gender,
+li.breedType {
+    font-weight: bolder;
+}
+
 .animalImg, .imgNotAvail {
     max-height: 200px;
     max-width: 250px;
     border-radius: 6px;
 }
 
+.animalImg:hover, .imgNotAvail:hover {
+    border: 4px solid #E96435;
+}
+
 #results {
     font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #143D47;  
+}
+
+a:hover {
+    cursor: pointer;
+    color: #E96435;
+    font-weight: bolder;
+    font-size: 20px;
 }
 
 form.searchForm {
     display: none;
 }
 
+.searchForm {
+    display: flex;
+    flex-direction: column;
+}
+
 .searchSubmitButton {
+    display: block;
     width: 100px;
-    padding: 4px;
+    padding: 5px;
     border-color: #E96435;
     border-radius: 6px;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     background-color: #E96435;
     color: white;
-    margin-left: 10px;
+    margin-top: 20px;
+    float: right; 
 }
 
 .searchSubmitButton:hover {
     cursor: pointer;
 }
 
-select#searchRabbitBreeds {
-    width: 140px;
+.hiddenSearchPageCategories {
+    display: none;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 20px;
 }
-select#searchDogBreeds {
-    width: 300px;
+
+select:hover {
+    cursor: pointer;
 }
-select#searchCatBreeds {
-    width: 260px;
-}
-select#searchBirdBreeds,
-select#searchHorseBreeds,
-select#searchLocations {
-    width: 150px;
-}
+
 select#searchTypes {
-    width: 120px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 10px 5px 5px rgb(255, 253, 215);
 }
-select#searchSize {
-    width: 80px;
-}
-select#searchGender,
-select#searchAge {
-    width: 50px;
+
+select {
+    padding: 7px;
+    max-width: 150px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bolder;
+    font-family: 'Poppins', sans-serif;
+    border: 1px solid white;
+    border-radius: 4px;
 }
 
 select#searchDogBreeds,
@@ -221,53 +250,20 @@ select#searchCatBreeds,
 select#searchBirdBreeds,
 select#searchRabbitBreeds,
 select#searchHorseBreeds,
-.hiddenSearchPageCategories {
-    display: none;
-}
-
-.searchPageCategories{
-    background-color: cornsilk;
-    max-width: 250px;
-    height: 30px;
-    opacity: 0.9;
-    font-size: 13px;
-    padding-top: 5px;
-    padding-bottom: 5px;
+select#searchLocations,
+select#searchSize,
+select#searchGender,
+select#searchAge {
     margin-right: 10px;
-    margin-left: 10px;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    border-radius: 10px;
-    border-bottom: 1px solid #ccc;
-    position: relative;
-  }
-
-  .selectSearchPage {
-    text-align: left;
-    padding-left: 4px;
-    width: 120px;
-  }
-
- .searchPageCategories:hover {
-      cursor: pointer;
-  }
-  
-  .searchPageCategories .selectSearchPage select{
-    font-family: 'Poppins', sans-serif;
-    background: transparent;
-    line-height: 1;
-    border: 0;
-    padding: 0;
-    border-radius: 0;
-    position: relative;
-    z-index: 10;
-    font-size: 1em;
-  }
+    box-shadow: 10px 5px 5px rgb(255, 253, 215);
+}
 
 p.noResults {
     display: block;
     color: red;
     text-align: center;
+    margin-right: auto;
+    margin-left: auto;
     font-size: 30px;
     margin-top: 100px;
     text-transform: uppercase;
@@ -426,7 +422,7 @@ padding-right: 20px;
     text-align: center;
 }
 
-input[type=text], select, textarea{
+input[type=text], textarea{
     width: 50%;
     padding: 12px;
     border: 1px solid #ccc;
@@ -505,6 +501,15 @@ input[type=text], select, textarea{
     visibility: visible;
   }
 
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    background-color: #12BB97;            /* Footer height */
+  }
+  
+
   /* media queries  */
 
 @media screen and (min-width: 650px) {
@@ -562,6 +567,14 @@ input[type=text], select, textarea{
           width: 700px;
           height: 420px;
       }
+
+  }
+
+  @media screen and (max-width: 769px) {
+    .searchSubmitButton {
+        float: none;
+        margin-right: 30px;
+    }
   }
 
   @media only screen and (max-width: 1080px) {
