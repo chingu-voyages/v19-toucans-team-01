@@ -108,3 +108,24 @@ body {
 ul {
     list-style-type: none;
 }
+
+/* 
+*/
+/* 
+*/
+
+/* ABOUT PAGE STYLE */
+h1,h2,h3,h4,h5,h6,p{
+    font-family: 'Numans', sans-serif;
+}
+
+.pageTitle{
+    background-color: #143D47;
+    height: 260px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Title{
+    color: #FFFAFB;
+}
