@@ -381,47 +381,26 @@ padding-right: 20px;
 }
 
 /* Contact Us form */
+
 .contact-us {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    background-size: cover;
-    font-family: 'Acme' , sans-serif;
-    color: black;
-    overflow-x: hidden;
-    background-color: #143D47;
-}
-
-.contact-us h2 {
-    text-align: center;
-    color: Black;
-    font-size: 40px;
-}
-
-.contact-us p {
-    height: 100px;
-    width: 670px;
-    justify-content: center;
-    background-color: #12BB97;
-    color: black;
-    opacity: 0.5;
-    padding: 15px;
-    margin-left: 0%;
-    margin-bottom: 3%;
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
-    background-color: #464655;
+    background-color: #143D47;
+    color: white;
+    font-family: 'Poppins', sans-serif;
   }
+
+.contact-us h3 {
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
+
 
 
 input[type=text], select, textarea{
-    width: 50%;
+    width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -429,13 +408,13 @@ input[type=text], select, textarea{
     resize: vertical;
     font-family: 'Poppins', sans-serif;
   }
-  
-  .contactLabel {
-    padding: 8px 8px 8px 0px;
+
+  label {
+    padding: 12px 12px 12px 0;
     display: inline-block;
-    color: white;
-    margin: 50px 5px 5px 15px;
+    font-size: 30px;
   }
+  
   
   input[type=submit] {
     background-color: #E96435;
@@ -465,9 +444,12 @@ input[type=text], select, textarea{
     clear: both;
   }
    
-.footer {
-    height:20vh;
-}
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
    
 .footer {
     height:20vh;
