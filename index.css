@@ -381,8 +381,7 @@ padding-right: 20px;
 }
 
 /* Contact Us form */
-
-.contact-form {
+.contact-us {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -398,13 +397,13 @@ padding-right: 20px;
     background-color: #143D47;
 }
 
-.contact-form h2 {
+.contact-us h2 {
     text-align: center;
     color: Black;
     font-size: 40px;
 }
 
-.contact-form p {
+.contact-us p {
     height: 100px;
     width: 670px;
     justify-content: center;
@@ -420,11 +419,6 @@ padding-right: 20px;
     background-color: #464655;
   }
 
-.contact-us h3 {
-    font-family: 'Poppins', sans-serif;
-    color: white;
-    text-align: center;
-}
 
 input[type=text], select, textarea{
     width: 50%;
@@ -436,7 +430,7 @@ input[type=text], select, textarea{
     font-family: 'Poppins', sans-serif;
   }
   
-  label.contactLabel {
+  .contactLabel {
     padding: 8px 8px 8px 0px;
     display: inline-block;
     color: white;
@@ -470,6 +464,10 @@ input[type=text], select, textarea{
     display: table;
     clear: both;
   }
+   
+.footer {
+    height:20vh;
+}
    
 .footer {
     height:20vh;
