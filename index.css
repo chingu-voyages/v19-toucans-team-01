@@ -319,6 +319,12 @@ p.noResults {
     color: #fff;
 }
 
+@media screen and (max-width: 600px) {
+    .three-box, .btn, .extraClass {
+      width: 100%;
+      margin-top: 0, 5, 0, 5;
+    }
+  }
 /* About us section */
 .about-us {
     height: 100vh;
