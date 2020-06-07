@@ -43,7 +43,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
   return fetch(fetchUrl, {
     headers: {
       'Authorization': `${data.token_type} ${data.access_token}`,
-      'Content-Type': 'application/x-www/form-urlencoded'
+      'Content-Type': 'application/x-www/form-urlencoded',
     }
   })
 }).then(response => {
@@ -117,6 +117,7 @@ function getValues() {
 
 //scrolls to results after search page submit
 function scrollToResults() {
+  console.log("scrolling")
   $('html, body').animate({
     scrollTop: $("#results").offset().top
 }, 2000);
@@ -132,6 +133,33 @@ function resetForm() {
 //gets values from search page form
  function getSearchPageValues() {
   $('.searchForm').submit(event => {
+    event.preventDefault();
+    let type = $('#searchTypes').val();
+    let dogBreed = $('#searchDogBreeds').val();
+    let catBreed = $('#searchCatBreeds').val();
+    let rabbitBreed = $('#searchRabbitBreeds').val();
+    let horseBreed = $('#searchHorseBreeds').val();
+    let birdBreed = $('#searchBirdBreeds').val();
+    let location = $('#searchLocations').val();
+    let size = $('#searchSize').val();
+    let gender = $('#searchGender').val();
+    let age = $('#searchAge').val();
+    let fetchUrl = 'https://api.petfinder.com/v2/animals?limit=100&'
+    type == 'null' ? fetchUrl+='': fetchUrl += '&type=' + type;
+    location == 'null' ? fetchUrl+='': fetchUrl += '&location=' + location;
+    dogBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + dogBreed;
+    catBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + catBreed;
+    rabbitBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + rabbitBreed;
+    horseBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + horseBreed;
+    birdBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + birdBreed;
+    size == 'null' ? fetchUrl += '': fetchUrl += '&size=' + size;
+    gender == 'null' ? fetchUrl +='': fetchUrl += '&gender=' + gender ;
+    age == 'null' ? fetchUrl+='': fetchUrl += '&age=' + age;
+    fetchAnimals(fetchUrl);
+    scrollToResults();
+    resetForm();
+  }) 
+  $('.searchPageForm').submit(event => {
     event.preventDefault();
     let type = $('#searchTypes').val();
     let dogBreed = $('#searchDogBreeds').val();
