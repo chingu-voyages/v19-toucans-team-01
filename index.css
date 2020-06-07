@@ -453,8 +453,13 @@ input[type=text], select, textarea{
     }
   }
    
-.footer {
-    height:20vh;
+  .footer {
+    padding-left: 5%; 
+    position: fixed;
+    height: 70vh;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
 /* loading spinner */
