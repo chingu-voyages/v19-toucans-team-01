@@ -198,6 +198,15 @@ form.searchForm {
     flex-direction: column;
 }
 
+.searchPageForm {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(241, 233, 189);
+    height: 100vh;
+    width: 100%;
+    overflow: scroll;
+}
+
 .searchSubmitButton {
     display: block;
     width: 100px;
@@ -221,6 +230,7 @@ form.searchForm {
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
+    /* max-width: 1000px; */
 }
 
 select:hover {
@@ -319,12 +329,6 @@ p.noResults {
     color: #fff;
 }
 
-@media screen and (max-width: 600px) {
-    .three-box, .btn, .extraClass {
-      width: 100%;
-      margin-top: 0, 5, 0, 5;
-    }
-  }
 /* About us section */
 .about-us {
     height: 100vh;
@@ -492,7 +496,7 @@ input[type=text], select, textarea{
     bottom: 0;
     width: 100%;
     height: 2.5rem;
-    background-color: #12BB97;            /* Footer height */
+    background-color: #12BB97;            
   }
   
 

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
+    <title>Hachiko</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Muli:wght@600&family=Numans&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="index.css" rel="stylesheet" type="text/css" />
+    <script
+    src="https://code.jquery.com/jquery-3.2.1.min.js"
+    integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+    crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <!-- nav bar -->
+    <nav class="nav" id="topNav">
+     <a href="index.html" class="logo"><img src="./images/logo.png"></a>
+      <a href="index.html" class="home">Home</a>
+      <a href="about.html" class="aboutHachiko">About Hachiko</a>
+      <a href="search.html" class="searchPage">Search</a>
+      <a href="contact.html" class="contact">Contact</a>
+      <div class="iconToggle">
+      <a href="javascript:void(0);" style="font-size:38px;" class="icon" onclick="navDrop()"><i class="fas fa-bars"></i></a>
+      </div>
+    </nav>
+
+    <!-- contact form -->
+    <div id="contact">
+        <div class="contact-us">
+          <h3>We Want To Hear From You!</h3>
+          <!-- <form action="action_page.php"> -->
+            <form>
+            <div class="row">
+              <div class="col-25">
+                <label for="fname" class="contactLabel">First Name:</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="lname" class="contactLabel">Last Name:</label>
+              </div>
+              <div class="col-75">
+                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-25">
+                <label for="subject" class="contactLabel">Subject:</label>
+              </div>
+              <div class="col-75">
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+              </div>
+            </div>
+            <div class="row">
+              <input type="submit" value="Submit">
+            </div>
+          </form>
+        </div>
+        </div>
+      </div>
+      <section class="footer">FOOTER</section>
+
+      <!-- script for responsive hamburger nav -->
+      <script>
+        function navDrop() {
+          let x = document.getElementById("topNav");
+          if (x.className === "nav") {
+            x.className += " responsive";
+          } else {
+            x.className = "nav";
+          }
+        }
+      </script>
+      <script src="breedList.js"></script>
+      <script src="search.js"></script>
+  </body>
+  </html>
