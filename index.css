@@ -68,7 +68,7 @@ nav.nav a.logo img {
 /* landing page */
 
 .landing {
-    height: 100vh; 
+    height: 60vh; 
     background-color: #143D47;
     display: block;
     text-align: center;
@@ -283,7 +283,7 @@ p.noResults {
 /* 3 box section */
 
 .three-box {
-    height: 60vh;
+    height: 40vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -347,11 +347,11 @@ p.noResults {
 /* Collage */
 
 #collage {
-    background-color: snow;
+    background-color: #c2970a;
     padding: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
 
 .collage-img {
