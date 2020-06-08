@@ -282,7 +282,7 @@ p.noResults {
 /* 3 box section */
 
 .three-box {
-    height: 60vh;
+    height: 40vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -346,11 +346,11 @@ p.noResults {
 /* Collage */
 
 #collage {
-    background-color: snow;
+    background-color: #c2970a;
     padding: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
 
 .collage-img {
@@ -456,8 +456,12 @@ input[type=text], select, textarea{
     }
   }
    
-.footer {
-    height:20vh;
+  .footer {
+    padding-left: 5%; 
+    height: 5vh;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
 /* loading spinner */
@@ -490,13 +494,6 @@ input[type=text], select, textarea{
     visibility: visible;
   }
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    background-color: #12BB97;            
-  }
   
 
   /* media queries  */
