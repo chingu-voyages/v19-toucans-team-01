@@ -202,7 +202,6 @@ form.searchForm {
     display: flex;
     flex-direction: column;
     background-color: rgb(241, 233, 189);
-    height: 100vh;
     width: 100%;
     overflow: scroll;
 }
@@ -230,6 +229,11 @@ form.searchForm {
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
+}
+
+.searchPageContainer {
+    height: 100vh;
+    background-color: rgb(241, 233, 189);
 }
 
 select:hover {
@@ -282,7 +286,7 @@ p.noResults {
 /* 3 box section */
 
 .three-box {
-    height: 60vh;
+    height: 40vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -346,11 +350,11 @@ p.noResults {
 /* Collage */
 
 #collage {
-    background-color: snow;
+    background-color: #c2970a;
     padding: 50px;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-bottom: 50px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
 }
 
 .collage-img {
@@ -456,8 +460,12 @@ input[type=text], select, textarea{
     }
   }
    
-.footer {
-    height:20vh;
+  .footer {
+    padding-left: 5%; 
+    height: 5vh;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
 }
 
 /* loading spinner */
@@ -490,18 +498,11 @@ input[type=text], select, textarea{
     visibility: visible;
   }
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    background-color: #12BB97;            
-  }
   
 
   /* media queries  */
 
-  @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
       form.petSearch {
           width: 300px;
       }
@@ -581,6 +582,12 @@ input[type=text], select, textarea{
     }
   }
 
+  @media screen and (min-width: 1080px) {
+    .hiddenSearchPageCategories {
+        width: 880px;
+    }
+  }
+
   @media only screen and (max-width: 1080px) {
     .parent {
         display: grid;
@@ -635,7 +642,7 @@ input[type=text], select, textarea{
     .parent {
         display: grid;
         justify-content: center;
-        grid-template-columns: 400px;
+        grid-template-columns: 250px;
         grid-template-rows: repeat(4, 1fr);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
