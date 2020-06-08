@@ -459,8 +459,7 @@ input[type=text], select, textarea{
    
   .footer {
     padding-left: 5%; 
-    position: fixed;
-    height: 70vh;
+    height: 5vh;
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
@@ -496,13 +495,6 @@ input[type=text], select, textarea{
     visibility: visible;
   }
 
-  .footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 2.5rem;
-    background-color: #12BB97;            
-  }
   
 
   /* media queries  */
