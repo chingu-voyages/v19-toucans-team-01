@@ -68,7 +68,7 @@ nav.nav a.logo img {
 /* landing page */
 
 .landing {
-    height: 60vh; 
+    height: 500px; 
     background-color: #143D47;
     display: block;
     text-align: center;
@@ -230,7 +230,6 @@ form.searchForm {
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
-    /* max-width: 1000px; */
 }
 
 select:hover {
@@ -499,6 +498,12 @@ input[type=text], select, textarea{
 
   /* media queries  */
 
+  @media screen and (max-width: 400px) {
+      form.petSearch {
+          width: 300px;
+      }
+}
+
 @media screen and (min-width: 650px) {
   #results {
       display: flex;
@@ -547,6 +552,15 @@ input[type=text], select, textarea{
     .nav.responsive a.home {
         margin-top: 70px;
     }
+  }
+
+  @media screen and (max-width: 700px) {
+      .three-box {
+          display: flex;
+          flex-direction: column;
+          height: 600px;
+      }
+
   }
 
   @media screen and (min-width: 792px) {
