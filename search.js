@@ -10,7 +10,6 @@ function homeRender() {
     $('.landing').show();
     $('#results').hide();
     $('.searchForm').hide();
-    $('.searchResultsPage').removeClass('fillForm');
   })
 }
 
@@ -20,9 +19,11 @@ function searchRender() {
     $('.landing').hide();
     $('.bottom').hide();
     $('.searchForm').css('display', 'flex');
-    $('.searchResultsPage').addClass('fillForm');
-    $('section#results').addClass('fillHeight');
   })
+}
+
+function searchSubmitButton() {
+    $('div.searchPageContainer').css('height', 'auto');
 }
 
 function fetchAnimals(fetchUrl) {
@@ -51,6 +52,7 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
  // running the rendering function 
 }).then(data => 
   displayResults(data.animals))
+  searchSubmitButton()
 .catch(err => {
   console.log('something went wrong', err)
 })
@@ -61,8 +63,6 @@ function displayResults(data) {
   $('#results').empty();
   $('.searchForm').show();
   $('.searchForm').css('display', 'flex');
-  $('.searchResultsPage').addClass('fillForm');
-  $('section#results').addClass('fillHeight');
 //if the response is empty, render no results found
 data.length === 0 ? $('#results').append(`<p class="noResults">No Results Found</p>`) : 
 //otherwise map through and render lists for each animal
@@ -117,7 +117,6 @@ function getValues() {
 
 //scrolls to results after search page submit
 function scrollToResults() {
-  console.log("scrolling")
   $('html, body').animate({
     scrollTop: $("#results").offset().top
 }, 2000);
@@ -254,6 +253,7 @@ function searchTypeToggle() {
 
 //run all search functionality
 $(function() {
+  
   searchTypeToggle()
   breeds()
   toggleNav()

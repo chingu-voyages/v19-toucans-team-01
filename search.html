@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
@@ -18,7 +18,7 @@
 
     <!-- nav bar -->
     <nav class="nav" id="topNav">
-     <a href="index.html" class="logo"><img src="./images/logo/Logo.png"></a>
+     <a href="index.html" class="logo"><img src="./images/logo/Logo.png" alt="logo"></a>
       <a href="index.html" class="home">Home</a>
       <a href="about.html" class="aboutHachiko">About Hachiko</a>
       <a href="#" class="searchPage">Search</a>
@@ -29,7 +29,7 @@
     </nav>
 
     <!-- search results page -->
-    <div class="searchPageContainer">
+    <!-- <div class="searchPageContainer"> -->
         <form class="searchPageForm">
           <h1>Pet Search</h1>
           <select id="searchTypes">
@@ -129,13 +129,18 @@
                 <option value="adult">Adult</option>
                 <option value="senior">Senior</option>
               </select>
+              </div>
           <button class="searchSubmitButton" type="submit" value="Search">Search</button>
           <div class="spinner"></div> 
         </form>
-        </div>
+        <div class="searchPageContainer">
+    </div>
       <section id="results">
       </section>
+      <div class=footer>
+        <p>Developer Info: Tarin Pratt, Lindsey Dobrinski, Brandyn Orr, & Brendan Kenney.</p>
     </div>
+     
 
     <!-- script for responsive hamburger nav -->
     <script>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
@@ -17,11 +17,11 @@
   <body>
     <!-- nav bar -->
     <nav class="nav" id="topNav">
-     <a href="index.html" class="logo"><img src="./images/logo/Logo.png"></a>
+     <a href="index.html" class="logo"><img src="./images/logo/Logo.png" alt="logo"></a>
       <a href="index.html" class="home">Home</a>
       <a href="about.html" class="aboutHachiko">About Hachiko</a>
-      <a href="#" class="searchPage">Search</a>
-      <a href=#contact class="contact">Contact</a>
+      <a href="search.html" class="searchPage">Search</a>
+      <a href="contact.html" class="contact">Contact</a>
       <div class="iconToggle">
       <a href="javascript:void(0);" style="font-size:38px;" class="icon" onclick="navDrop()"><i class="fas fa-bars"></i></a>
       </div>
@@ -107,18 +107,17 @@
 <!-- bottom of landing page -->
     <div class="bottom">
     <section class="three-box">
-      <div class="container center-text"></div>
       <div class="center-text">
         <p><i class="fas fa-bone extraClass"></i></p>
-        <button class="btn btn1"><a href="search.html">Find Your Pet</a></button>
+        <a href="search.html" class="btn btn1">Find Your Pet</a>
       </div>
       <div class="center-text">
         <p><i class="fas fa-cat extraClass"></i></p>
-        <button class="btn btn2"><a href=#contact>Contact Us!</a></button>
+        <a href=#contact class="btn btn2">Contact Us!</a>
       </div>
       <div class="center-text">
         <p><i class="fas fa-paw extraClass"></i></p>
-        <button class="btn btn3"><a href="about.html">About Hachikō</a></button>
+        <a href="about.html" class="btn btn3">About Hachikō</a>
       </div>
       <div class="spinner"></div>
     </section>
@@ -132,7 +131,7 @@
         <div class="div4"><img class="collage-img" src="images/test_img/img-4.jpg" alt="test images"> </div>
         <div class="div5"><img class="collage-img" src="images/test_img/img-5.jpg" alt="test images"> </div>
         <div class="div6"><img class="collage-img" src="images/test_img/img-6.jpg" alt="test images"> </div>
-        <div class="div7"><img class="collage-img" src="images/test_img/img-4x6.jpg"> </div>
+        <div class="div7"><img class="collage-img" src="images/test_img/img-4x6.jpg" alt="test images"> </div>
         <div class="div8">
           <h2 class="collage-heading">Finding the One</h2>
           <p class="collage-text">Culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
@@ -150,7 +149,7 @@
 <!-- contact form -->
     <div id="contact">
     <div class="contact-us">
-      <h3 id="contact">We Want To Hear From You!</h3>
+      <h3 class="contact">We Want To Hear From You!</h3>
         <form>
         <div class="row">
           <div class="col-25">
@@ -285,11 +284,11 @@
                 <option value="adult">Adult</option>
                 <option value="senior">Senior</option>
               </select>
-              
+              </div>
           <button class="searchSubmitButton" type="submit" value="Search">Search</button>
           <div class="spinner"></div> 
         </form>
-      </div>
+        </div>
       <section id="results">
       </section>
 
