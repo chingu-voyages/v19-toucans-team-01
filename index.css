@@ -202,7 +202,6 @@ form.searchForm {
     display: flex;
     flex-direction: column;
     background-color: rgb(241, 233, 189);
-    height: 100vh;
     width: 100%;
     overflow: scroll;
 }
@@ -230,6 +229,11 @@ form.searchForm {
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
+}
+
+.searchPageContainer {
+    height: 100vh;
+    background-color: rgb(241, 233, 189);
 }
 
 select:hover {
@@ -499,7 +503,7 @@ input[type=text], select, textarea{
 
   /* media queries  */
 
-  @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
       form.petSearch {
           width: 300px;
       }
@@ -579,6 +583,12 @@ input[type=text], select, textarea{
     }
   }
 
+  @media screen and (min-width: 1080px) {
+    .hiddenSearchPageCategories {
+        width: 880px;
+    }
+  }
+
   @media only screen and (max-width: 1080px) {
     .parent {
         display: grid;
@@ -633,7 +643,7 @@ input[type=text], select, textarea{
     .parent {
         display: grid;
         justify-content: center;
-        grid-template-columns: 400px;
+        grid-template-columns: 250px;
         grid-template-rows: repeat(4, 1fr);
         grid-column-gap: 10px;
         grid-row-gap: 10px;
