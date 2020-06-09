@@ -23,7 +23,7 @@ function searchRender() {
 }
 
 function searchSubmitButton() {
-    $('div.searchPageContainer').css('height', 'auto');
+    $('div.searchPageContainer').css('height', '0');
 }
 
 function fetchAnimals(fetchUrl) {
