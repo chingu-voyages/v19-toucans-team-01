@@ -304,7 +304,7 @@ p.noResults {
 .btn {
     height: 60px;
     width: 200px;
-    background-color:  #c2970a;
+    background-color: #12BB97;
     border: 1px solid;
     border-radius: 5px;
     padding: 10px 20px;
@@ -349,7 +349,7 @@ p.noResults {
 /* Collage */
 
 #collage {
-    background-color: #c2970a;
+    background-color: #E96435;
     padding: 50px;
     margin-left: 0px;
     margin-right: 0px;
