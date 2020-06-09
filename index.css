@@ -26,6 +26,7 @@ font-family: 'Numans', sans-serif;
 
 p {
     font-family: 'Numans', sans-serif;
+    padding-bottom: 20px;
 }
 
 /* Navigation bar */
@@ -123,17 +124,8 @@ form.petSearch {
 
 /* results page */
 
-.fillHeight {
-    height: 100vh;
-    width: 100%;
-    overflow: scroll;
-}
-
-.fillForm {
-   background-color: rgb(241, 233, 189);
-   height: 100vh;
-   width: 100%;
-   overflow: scroll;
+.searchResultsPage {
+    background-color:rgb(241, 233, 189);
 }
 
 h1 {
@@ -152,7 +144,7 @@ h1 {
     padding: 15px;
     margin-right: auto;
     margin-left: auto;
-    margin-top: 20px;
+    /* margin-top: 20px; */
     margin-bottom: 20px;
     border-radius: 6px;
 }
@@ -175,6 +167,7 @@ li.breedType {
 
 #results {
     font-family: 'Poppins', sans-serif;
+    background-color: rgb(241, 233, 189);
 }
 
 a {
@@ -196,6 +189,7 @@ form.searchForm {
 .searchForm {
     display: flex;
     flex-direction: column;
+    overflow: scroll;
 }
 
 .searchPageForm {
@@ -217,7 +211,10 @@ form.searchForm {
     background-color: #E96435;
     color: white;
     margin-top: 20px;
-    float: right; 
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 15px;
+     
 }
 
 .searchSubmitButton:hover {
@@ -228,6 +225,7 @@ form.searchForm {
     display: none;
     margin-right: auto;
     margin-left: auto;
+    text-align: center;
     padding: 20px;
 }
 
@@ -297,6 +295,7 @@ p.noResults {
 
 .center-text {
     text-align: center;
+    padding: 20px;
 }
 
 /* Buttons and button properties */
@@ -319,12 +318,11 @@ p.noResults {
 }
 
 .btn1,.btn2,.btn3 {
-    color: black;
+    color: #143D47;
 }
 
 .btn1:hover,.btn2:hover,.btn3:hover {
     background-color: #143D47;
-    color: #12BB97;
 }
 
 .extraClass {
@@ -332,25 +330,10 @@ p.noResults {
     color: #fff;
 }
 
-/* About us section */
-.about-us {
-    height: 100vh;
-    background-color: darkgrey;
-}
-.pet-quiz {
-    height: 100vh;
-    background-color: lightgray;
-}
-
-.more-info {
-    height: 100vh;
-    background-color: lightgray;
-}
-
 /* Collage */
 
 #collage {
-    background-color: #c2970a;
+    background-color: #E96435;
     padding: 50px;
     margin-left: 0px;
     margin-right: 0px;
@@ -391,8 +374,12 @@ padding-right: 20px;
 
 /* Contact Us form */
 
+#contactWrapper {
+    background-color: #143D47;
+    height: 100vh;
+}
+
 .contact-us {
-    border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
     background-color: #143D47;
@@ -405,8 +392,6 @@ padding-right: 20px;
     color: white;
     font-size: 35px;
 }
-
-
 
 input[type=text], select, textarea{
     width: 100%;
@@ -466,6 +451,8 @@ input[type=text], select, textarea{
     text-align: center;
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
+    background-color:  #12BB97;
+    bottom: 0;
 }
 
 /* loading spinner */
@@ -573,13 +560,6 @@ input[type=text], select, textarea{
           height: 420px;
       }
 
-  }
-
-  @media screen and (max-width: 769px) {
-    .searchSubmitButton {
-        float: none;
-        margin-right: 30px;
-    }
   }
 
   @media screen and (min-width: 1080px) {
