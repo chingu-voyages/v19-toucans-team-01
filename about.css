@@ -105,6 +105,17 @@ nav {
 body {
     text-align: center;
     font-family: 'Poppins', sans-serif;
+    background-color: #E96435;;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.aboutContent p {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 ul {
     list-style-type: none;
