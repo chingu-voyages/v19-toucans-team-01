@@ -102,6 +102,10 @@ nav {
 .toggle .line3{
     transform: rotate(45deg) translate(-5px,-6px);
 }
+ul {
+    list-style-type: none;
+}
+
 body {
     text-align: center;
     font-family: 'Poppins', sans-serif;
@@ -114,29 +118,66 @@ body {
 }
 
 .box1 {
-    height: 50vh;
+    height: 80vh;
     width: 100%;
     background-image: url(assets/hatchiko-wide.jpg);
     background-size: cover;
     background-position: center;
     display: table;
     background-attachment: fixed;
-
 }
 
 .aboutTitle h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 48px;
-    color: black;
+    color: white;
     margin: 0px;
     text-align: center;
 }
 
-.aboutContent p {
-    height: 100vh;
-    text-align: center;
+.aboutTitle p {
     font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    text-align: left;
+    padding: 40px 10px 40px 40px;
 }
-ul {
-    list-style-type: none;
+
+.about {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    text-align: left;
+    padding: 40px 10px 40px 40px;
+}
+
+.statue p{
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    text-align: left;
+    padding: 40px 10px 40px 40px;
+}
+
+.box2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/Hachiko.png);
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+}
+
+.box3 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/haichkostatue.png);
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
 }
