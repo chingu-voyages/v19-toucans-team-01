@@ -8,7 +8,7 @@ function homeRender() {
   $('.home').click(function() {
     $('.bottom').show();
     $('.landing').show();
-    $('.results').hide();
+    $('#results').hide();
     $('.searchForm').hide();
   })
 }
@@ -22,7 +22,12 @@ function searchRender() {
   })
 }
 
+function searchSubmitButton() {
+    $('div.searchPageContainer').css('height', '0');
+}
+
 function fetchAnimals(fetchUrl) {
+  $('.spinner').addClass('show');
 //getting authorization bearer for each separate fetch call
 fetch('https://api.petfinder.com/v2/oauth2/token', {
 	method: 'POST',
@@ -39,54 +44,55 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
   return fetch(fetchUrl, {
     headers: {
       'Authorization': `${data.token_type} ${data.access_token}`,
-      'Content-Type': 'application/x-www/form-urlencoded'
+      'Content-Type': 'application/x-www/form-urlencoded',
     }
   })
 }).then(response => {
   return response.json()
  // running the rendering function 
-}).then(data => displayResults(data.animals))
+}).then(data => 
+  displayResults(data.animals))
+  searchSubmitButton()
 .catch(err => {
   console.log('something went wrong', err)
 })
 }
 
 function displayResults(data) { 
-  $('.results').empty();
+  $('.spinner').removeClass('show');
+  $('#results').empty();
   $('.searchForm').show();
   $('.searchForm').css('display', 'flex');
 //if the response is empty, render no results found
-data.length === 0 ? $('.results').append(`<p>No results found</p>`) : 
+data.length === 0 ? $('#results').append(`<p class="noResults">No Results Found</p>`) : 
 //otherwise map through and render lists for each animal
 data.map((i) => {
   i.photos[0] === undefined ? 
  //list to render if no photos are provided (it was throwing errors with the api) 
-        $('.results').append(`
+        $('#results').append(`
     <ul class="resultCard" >
-    <li class="petName"><h2>${i.name}</h2></li>
-    <img src='images/noPhoto.jpg' alt='animal' class="imgNotAvail">
+    <li class="petName"><a href=${i.url} target="_blank"><h2>${i.name}</h2></a></li>
+    <a href=${i.url} target="_blank"><img src='images/noPhoto.jpg' alt='animal' class="imgNotAvail"></a>
     <li class="breedType> ${i.breeds.primary}</li>
     <li class="gender">${i.gender}</li>
     <li class="age">${i.age}</li>
-    <li class="linkForMore"><a href=${i.url} target="_blank">More about ${i.name} </a></li>
     <li class="emailLink"><a href='mailto:${i.contact.email}'><em>Email Shelter</em></a></li>
     </ul>
     `)
     : 
   //otherwise render with animal photo
-    $('.results').append(`
+    $('#results').append(`
     <ul class="resultCard" >
-    <li class="petName"><h2>${i.name}</h2></li>
-    <img src='${i.photos[0].medium}' alt='animal' class="animalImg">
+    <li class="petName"><a href=${i.url} target="_blank"><h2>${i.name}</h2></a></li>
+    <a href=${i.url} target="_blank"><img src='${i.photos[0].medium}' alt='animal' class="animalImg"></a>
     <li class="breedType">${i.breeds.primary}</li>
     <li class="gender">${i.gender}</li>
     <li class="age">${i.age}</li>
-    <li class="linkForMore"><a href=${i.url} target="_blank">More about ${i.name} </a></li>
     <li class="emailLink"><a href='mailto:${i.contact.email}'><em>Email Shelter</em></a></li>
     </ul>
     `);
   });
-  $('.results').show();
+  $('#results').show();
   $('.bottom').hide();
   homeRender();
 }
@@ -109,7 +115,21 @@ function getValues() {
   }) 
 }
 
-//gets values from search page form, search, and reset
+//scrolls to results after search page submit
+function scrollToResults() {
+  $('html, body').animate({
+    scrollTop: $("#results").offset().top
+}, 2000);
+}
+
+//resets form after search
+function resetForm() {
+  $('.searchForm').each(function(){
+    this.reset();
+});
+}
+
+//gets values from search page form
  function getSearchPageValues() {
   $('.searchForm').submit(event => {
     event.preventDefault();
@@ -123,7 +143,7 @@ function getValues() {
     let size = $('#searchSize').val();
     let gender = $('#searchGender').val();
     let age = $('#searchAge').val();
-    let fetchUrl = 'https://api.petfinder.com/v2/animals?'
+    let fetchUrl = 'https://api.petfinder.com/v2/animals?limit=100&'
     type == 'null' ? fetchUrl+='': fetchUrl += '&type=' + type;
     location == 'null' ? fetchUrl+='': fetchUrl += '&location=' + location;
     dogBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + dogBreed;
@@ -135,11 +155,38 @@ function getValues() {
     gender == 'null' ? fetchUrl +='': fetchUrl += '&gender=' + gender ;
     age == 'null' ? fetchUrl+='': fetchUrl += '&age=' + age;
     fetchAnimals(fetchUrl);
-    $('.searchForm').each(function(){
-      this.reset();
-  });
+    scrollToResults();
+    resetForm();
+  }) 
+  $('.searchPageForm').submit(event => {
+    event.preventDefault();
+    let type = $('#searchTypes').val();
+    let dogBreed = $('#searchDogBreeds').val();
+    let catBreed = $('#searchCatBreeds').val();
+    let rabbitBreed = $('#searchRabbitBreeds').val();
+    let horseBreed = $('#searchHorseBreeds').val();
+    let birdBreed = $('#searchBirdBreeds').val();
+    let location = $('#searchLocations').val();
+    let size = $('#searchSize').val();
+    let gender = $('#searchGender').val();
+    let age = $('#searchAge').val();
+    let fetchUrl = 'https://api.petfinder.com/v2/animals?limit=100&'
+    type == 'null' ? fetchUrl+='': fetchUrl += '&type=' + type;
+    location == 'null' ? fetchUrl+='': fetchUrl += '&location=' + location;
+    dogBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + dogBreed;
+    catBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + catBreed;
+    rabbitBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + rabbitBreed;
+    horseBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + horseBreed;
+    birdBreed == 'null' ? fetchUrl += '': fetchUrl += '&breed=' + birdBreed;
+    size == 'null' ? fetchUrl += '': fetchUrl += '&size=' + size;
+    gender == 'null' ? fetchUrl +='': fetchUrl += '&gender=' + gender ;
+    age == 'null' ? fetchUrl+='': fetchUrl += '&age=' + age;
+    fetchAnimals(fetchUrl);
+    scrollToResults();
+    resetForm();
   }) 
  }
+
 
 //renders different icons in nav bar 
 function toggleNav() {
@@ -170,12 +217,12 @@ dogBreedList.map((i) => {
       <option value="${i}">${i}</option>
       `)
   })
- catBreedList.map((i) => {
+catBreedList.map((i) => {
    $('#searchCatBreeds').append(`
    <option value="${i}">${i}</option>
    `)
  }) 
- birdBreedList.map((i) => {
+birdBreedList.map((i) => {
   $('#searchBirdBreeds').append(`
   <option value="${i}">${i}</option>
   `)
@@ -192,8 +239,22 @@ horseBreedList.map((i) => {
 }) 
 }
 
+//displays other search filters after the type of animal is selected
+function searchTypeToggle() {
+  $('select#searchTypes').change(function() {
+    let selectedType = $(this).children('option:selected').val();
+    selectedType == 'Dog' ? $('#searchDogBreeds').show() && $('.hiddenSearchPageCategories').show(): $('#searchDogBreeds').hide();
+    selectedType == 'Cat' ? $('#searchCatBreeds').show() && $('.hiddenSearchPageCategories').show(): $('#searchCatBreeds').hide();
+    selectedType == 'Rabbit' ? $('#searchRabbitBreeds').show() && $('.hiddenSearchPageCategories').show(): $('#searchRabbitBreeds').hide();
+    selectedType == 'Bird' ? $('#searchBirdBreeds').show() && $('.hiddenSearchPageCategories').show(): $('#searchBirdBreeds').hide();
+    selectedType == 'Horse' ? $('#searchHorseBreeds').show() && $('.hiddenSearchPageCategories').show(): $('#searchHorseBreeds').hide()
+  })
+}
+
 //run all search functionality
 $(function() {
+  
+  searchTypeToggle()
   breeds()
   toggleNav()
   homeRender()

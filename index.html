@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"/>
     <title>Hachiko</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Muli:wght@600&family=Numans&display=swap" rel="stylesheet">
@@ -15,21 +15,22 @@
     crossorigin="anonymous"></script>
   </head>
   <body>
+    
     <!-- nav bar -->
     <nav class="nav" id="topNav">
-     <a href="#" class="logo"><img src="./images/logo.png"></a>
-      <a href="#" class="home">Home</a>
+      <a href="index.html" class="logo"><img src="./images/logo/Logo.png" alt="logo"></a>
+      <a href="index.html" class="home">Home</a>
       <a href="about.html" class="aboutHachiko">About Hachiko</a>
-      <a href="#" class="searchPage">Search</a>
-      <a href="#contact" class="contact">Contact</a>
+      <a href="search.html" class="searchPage">Search</a>
+      <a href="contact.html" class="contact">Contact</a>
       <div class="iconToggle">
       <a href="javascript:void(0);" style="font-size:38px;" class="icon" onclick="navDrop()"><i class="fas fa-bars"></i></a>
       </div>
     </nav>
- 
+
 <!-- landing page -->
     <section class="landing">
-      <form class="petSearch">
+      <form class="petSearch" action="/search.html">
         <label for="types" class="landingLabel">Type of Animal</label>
         <div class= "searchCategories">
         <div class="select">
@@ -104,168 +105,22 @@
       </form>    
     </section>
     
-    <!-- search results page -->
-    <div class="searchResultsPage">
-    <form class="searchForm">
-      <div class= "searchPageCategories">
-      <div class="selectSearchPage">
-      <select id="searchTypes">
-        <option value="null">Type</option>
-        <option value="Dog">Dog</option>
-        <option value="Cat">Cat</option>
-        <option value="Rabbit">Rabbit</option>
-        <option value="Horse">Horse</option>
-        <option value="Bird">Bird</option>
-        <option value="Barnyard">Barnyard Animals</option>
-      </select>
-    </div>
-    </div>
-    <div class= "searchPageCategories">
-      <div class="selectSearchPage">
-      <select id="searchDogBreeds">
-        <option value="null">Dog Breed</option>
-      </select>
-    </div>
-    </div>
-    <div class= "searchPageCategories">
-      <div class="selectSearchPage">
-      <select id="searchCatBreeds">
-        <option value="null">Cat Breed</option>
-      </select>
-    </div>
-    </div>
-    <div class= "searchPageCategories">
-      <div class="selectSearchPage">
-      <select id="searchBirdBreeds">
-        <option value="null">Bird Breed</option>
-      </select>
-    </div>
-    </div>
-    <div class= "searchPageCategories">
-      <div class="selectSearchPage">
-      <select id="searchRabbitBreeds">
-        <option value="null">Rabbit Breed</option>
-      </select>
-    </div>
-    </div>
-    <div class= "searchPageCategories">
-      <div class="selectSearchPage">
-      <select id="searchHorseBreeds">
-        <option value="null">Horse Breed</option>
-      </select>
-    </div>
-    </div>
-      <div class= "searchPageCategories">
-      <div class="selectSearchPage">
-      <select id="searchLocations">
-        <option value="null">Location</option>
-        <option value="Alabama">Alabama</option>
-        <option value="Alaska">Alaska</option>
-        <option value="Arizona">Arizona</option>
-        <option value="Arkansas">Arkansas</option>
-        <option value="California">California</option>
-        <option value="Colorado">Colorado</option>
-        <option value="Connecticut">Connecticut</option>
-        <option value="Delaware">Delaware</option>
-        <option value="Florida">Florida</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Hawaii">Hawaii</option>
-        <option value="Idaho">Idaho</option>
-        <option value="Illinois">Illinois</option>
-        <option value="Indiana">Indiana</option>
-        <option value="Iowa">Iowa</option>
-        <option value="Kansas">Kansas</option>
-        <option value="Kentucky">Kentucky</option>
-        <option value="Louisiana">Louisiana</option>
-        <option value="Maine">Maine</option>
-        <option value="Maryland">Maryland</option>
-        <option value="Massachusetts">Massachusetts</option>
-        <option value="Michigan">Michigan</option>
-        <option value="Minnesota">Minnesota</option>
-        <option value="Mississippi">Mississippi</option>
-        <option value="Missouri">Missouri</option>
-        <option value="Montana">Montana</option>
-        <option value="Nebraska">Nebraska</option>
-        <option value="Nevada">Nevada</option>
-        <option value="New Hampshire">New Hampshire</option>
-        <option value="New Jersey">New Jersey</option>
-        <option value="New Mexicoy">New Mexico</option>
-        <option value="New York">New York</option>
-        <option value="North Carolina">North Carolina</option>
-        <option value="North Dakota">North Dakota</option>
-        <option value="Ohio">Ohio</option>
-        <option value="Oklahoma">Oklahoma</option>
-        <option value="Oregon">Oregon</option>
-        <option value="Pennsylvania">Pennsylvania</option>
-        <option value="Rhode Island">Rhode Island</option>
-        <option value="South Carolina">South Carolina</option>
-        <option value="South Dakota">South Dakota</option>
-        <option value="Tennessee">Tennessee</option>
-        <option value="Texas">Texas</option>
-        <option value="Utah">Utah</option>
-        <option value="Vermont">Vermont</option>
-        <option value="Virginia">Virginia</option>
-        <option value="Washington">Washington</option>
-        <option value="West Virginia">West Virginia</option>
-        <option value="Wisconsin">Wisconsin</option>
-        <option value="Wyoming">Wyoming</option>
-      </select>
-      </div>
-      </div>
-      <div class="searchPageCategories">
-        <div class="selectSearchPage">
-          <select id="searchSize">
-            <option value="null">Size</option>
-            <option value="small">Small</option>
-            <option value="medium">Medium</option>
-            <option value="large">Large</option>
-            <option value="xlarge">Extra Large</option>
-          </select>
-        </div>
-      </div>
-      <div class="searchPageCategories">
-        <div class="selectSearchPage">
-          <select id="searchGender">
-            <option value="null">Gender</option>
-            <option value="male">Male</option>
-            <option value="female">Female</option>
-          </select>
-        </div>
-      </div>
-      <div class="searchPageCategories">
-        <div class="selectSearchPage">
-          <select id="searchAge">
-            <option value="null">Age</option>
-            <option value="baby">Baby</option>
-            <option value="young">Young</option>
-            <option value="adult">Adult</option>
-            <option value="senior">Senior</option>
-          </select>
-        </div>
-      </div>
-      <button class="submitButton" type="submit" value="Search">Search</button>
-    </form>
-  <section class="results">
-  </section>
-</div>
-
 <!-- bottom of landing page -->
     <div class="bottom">
-    
     <section class="three-box">
-      <div class="container center-text"></div>
       <div class="center-text">
         <p><i class="fas fa-bone extraClass"></i></p>
-        <button class="btn btn1">Find Your Pet</button>
+        <a href="search.html" class="btn btn1">Find Your Pet</a>
       </div>
       <div class="center-text">
         <p><i class="fas fa-cat extraClass"></i></p>
-        <button class="btn btn2">Take The Quiz!</button>
+        <a href=#contact class="btn btn2">Contact Us!</a>
       </div>
       <div class="center-text">
         <p><i class="fas fa-paw extraClass"></i></p>
-        <button class="btn btn3">More about Hachikō</button>
+        <a href="about.html" class="btn btn3">About Hachikō</a>
       </div>
+      <div class="spinner"></div>
     </section>
 
     <!-- Collage -->
@@ -277,9 +132,9 @@
         <div class="div4"><img class="collage-img" src="images/test_img/img-4.jpg" alt="test images"> </div>
         <div class="div5"><img class="collage-img" src="images/test_img/img-5.jpg" alt="test images"> </div>
         <div class="div6"><img class="collage-img" src="images/test_img/img-6.jpg" alt="test images"> </div>
-        <div class="div7"><img class="collage-img" src="images/test_img/img-4x6.jpg"> </div>
+        <div class="div7"><img class="collage-img" src="images/test_img/img-4x6.jpg" alt="test images"> </div>
         <div class="div8">
-          <h2 class="collage-heading">Excepteur sint occaeuiecat cupidatat</h2>
+          <h2 class="collage-heading">Finding the One</h2>
           <p class="collage-text">Culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
             iste natus error sit voluptartem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
             illo inventore veritatis et quasi ropeior architecto beatae vitae dicta sunt explicabo. Nemo eniem ipsam
@@ -289,22 +144,17 @@
             magnam aliquam quaerat iope voluptatem.
           </p>
         </div>
-        <div class="div9">
-          <p class="collage-text">Lorem ipsum dolor sit amet, consectetur adipisifwcing elit, sed do eiusmod tempor
-            incididunt ut labore et dolore roipi magna aliqua. Ut enim ad minim veeniam, quis nostruklad exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in tufpoy
-            voluptate velit esse cillum dolore eu fugiat nulla parieratur. Excepteur sint occaecat cupidatat.</p>
-        </div>
       </div>
-
     </section>
+
 <!-- contact form -->
+    <div id="contact">
     <div class="contact-us">
-      <h3>Contact Us:</h3>
-      <form action="action_page.php">
+      <h3 class="contact">We Want To Hear From You!</h3>
+        <form>
         <div class="row">
           <div class="col-25">
-            <label for="fname" class="contactLabel">First Name</label>
+            <label for="fname" class="contactLabel">First Name:</label>
           </div>
           <div class="col-75">
             <input type="text" id="fname" name="firstname" placeholder="Your name..">
@@ -312,7 +162,7 @@
         </div>
         <div class="row">
           <div class="col-25">
-            <label for="lname" class="contactLabel">Last Name</label>
+            <label for="lname" class="contactLabel">Last Name:</label>
           </div>
           <div class="col-75">
             <input type="text" id="lname" name="lastname" placeholder="Your last name..">
@@ -320,7 +170,7 @@
         </div>
         <div class="row">
           <div class="col-25">
-            <label for="subject" class="contactLabel">Subject</label>
+            <label for="subject" class="contactLabel">Subject:</label>
           </div>
           <div class="col-75">
             <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
@@ -331,9 +181,121 @@
         </div>
       </form>
     </div>
+    </div>
+  </div>
 
+       <!-- search results page -->
+       <div class="searchResultsPage">
+        <form class="searchForm">
+          <h1>Pet Search</h1>
+          <select id="searchTypes">
+            <option value="null">Type</option>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Rabbit">Rabbit</option>
+            <option value="Horse">Horse</option>
+            <option value="Bird">Bird</option>
+            <option value="Barnyard">Barnyard Animals</option>
+          </select>
+        <div class="hiddenSearchPageCategories">
+          <select id="searchDogBreeds">
+            <option value="null">Dog Breed</option>
+          </select>
+          <select id="searchCatBreeds">
+            <option value="null">Cat Breed</option>
+          </select>
+          <select id="searchBirdBreeds">
+            <option value="null">Bird Breed</option>
+          </select>
+          <select id="searchRabbitBreeds">
+            <option value="null">Rabbit Breed</option>
+          </select>
+          <select id="searchHorseBreeds">
+            <option value="null">Horse Breed</option>
+          </select>
+          <select id="searchLocations">
+            <option value="null">Location</option>
+            <option value="Alabama">Alabama</option>
+            <option value="Alaska">Alaska</option>
+            <option value="Arizona">Arizona</option>
+            <option value="Arkansas">Arkansas</option>
+            <option value="California">California</option>
+            <option value="Colorado">Colorado</option>
+            <option value="Connecticut">Connecticut</option>
+            <option value="Delaware">Delaware</option>
+            <option value="Florida">Florida</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Hawaii">Hawaii</option>
+            <option value="Idaho">Idaho</option>
+            <option value="Illinois">Illinois</option>
+            <option value="Indiana">Indiana</option>
+            <option value="Iowa">Iowa</option>
+            <option value="Kansas">Kansas</option>
+            <option value="Kentucky">Kentucky</option>
+            <option value="Louisiana">Louisiana</option>
+            <option value="Maine">Maine</option>
+            <option value="Maryland">Maryland</option>
+            <option value="Massachusetts">Massachusetts</option>
+            <option value="Michigan">Michigan</option>
+            <option value="Minnesota">Minnesota</option>
+            <option value="Mississippi">Mississippi</option>
+            <option value="Missouri">Missouri</option>
+            <option value="Montana">Montana</option>
+            <option value="Nebraska">Nebraska</option>
+            <option value="Nevada">Nevada</option>
+            <option value="New Hampshire">New Hampshire</option>
+            <option value="New Jersey">New Jersey</option>
+            <option value="New Mexicoy">New Mexico</option>
+            <option value="New York">New York</option>
+            <option value="North Carolina">North Carolina</option>
+            <option value="North Dakota">North Dakota</option>
+            <option value="Ohio">Ohio</option>
+            <option value="Oklahoma">Oklahoma</option>
+            <option value="Oregon">Oregon</option>
+            <option value="Pennsylvania">Pennsylvania</option>
+            <option value="Rhode Island">Rhode Island</option>
+            <option value="South Carolina">South Carolina</option>
+            <option value="South Dakota">South Dakota</option>
+            <option value="Tennessee">Tennessee</option>
+            <option value="Texas">Texas</option>
+            <option value="Utah">Utah</option>
+            <option value="Vermont">Vermont</option>
+            <option value="Virginia">Virginia</option>
+            <option value="Washington">Washington</option>
+            <option value="West Virginia">West Virginia</option>
+            <option value="Wisconsin">Wisconsin</option>
+            <option value="Wyoming">Wyoming</option>
+          </select>
+              <select id="searchSize">
+                <option value="null">Size</option>
+                <option value="small">Small</option>
+                <option value="medium">Medium</option>
+                <option value="large">Large</option>
+                <option value="xlarge">Extra Large</option>
+              </select>
+              <select id="searchGender">
+                <option value="null">Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+              </select>
+              <select id="searchAge">
+                <option value="null">Age</option>
+                <option value="baby">Baby</option>
+                <option value="young">Young</option>
+                <option value="adult">Adult</option>
+                <option value="senior">Senior</option>
+              </select>
+              </div>
+          <button class="searchSubmitButton" type="submit" value="Search">Search</button>
+          <div class="spinner"></div> 
+        </form>
+        </div>
+      <section id="results">
+      </section>
 
-    <section class="footer"></section>
+      <div class=footer>
+          <p>Developer Info: Tarin Pratt, Lindsey Dobrinski, Brandyn Orr, & Brendan Kenney.</p>
+      </div>
 
     <!-- script for responsive hamburger nav -->
     <script>
@@ -347,8 +309,6 @@
       }
     </script>
     <script src="breedList.js"></script>
-    <script src="search.js"></script>
-    
+    <script src="search.js"></script>   
 </body>
-
 </html>
