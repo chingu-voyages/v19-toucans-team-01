@@ -6,33 +6,47 @@ This Project is part of the [Chingu.io](https:chingu.io) Voyages - Voyage 19 - [
 
 ## Description
 
-The goal of V19-Toucans-Team-01 is to make a website for people to adopt pets, especially wanted in this pandemic.<br/>
-We want to make an aesthetic website that is easy to navigate and accessible to many. <br/>
-This project helps the team members gain valuable team skills and familiarize themselves with an identical workspace as real software development teams for companies.
+Hachikō is an application created for users to search for adoptable pets in locations all over the United States. During the 2020 pandemic, pet adpotions hit the charts as people craved companionship during isolated times. Hachiko is our contribution to continue pet adoptions even after quarantines have been lifted. 
 
 ## Livesite
 
-* Currently being developed.
 [Live Demo](https://chingu-voyages.github.io/v19-toucans-team-01/)
 
-## Features
+**Users can find their perfect adoptable pet with the Hachiko App**
 
-* Currently being developed.
+![Hachiko screenshot](/images/findingTheOne.png)
+
+**Users can search for their desired animal to adopt within a certain state**
+
+![Hachiko screenshot](/images/landing.png)
+
+**Users can also search for certain breeds, age, size, and gender**
+
+![Hachiko screenshot](/images/petSearch.png)
+
+**Up to 100 results are rendered with the option to visit the adoption posting for selected animal and users can email the animal shelter about their desired pet**
+
+![Hachiko screenshot](/images/dogResults.png)
+
+**Users can also learn about Hachiko's story**
+
+![Hachiko screenshot](/images/aboutHachiko.png)
 
 ## Technology Used
 * HTML5
 * CSS
 * JavaScript
+* JQuery
 
-## Authors
+## Developers
 
-- [Brandyn Orr](https://github.com/BrandynCO) - AKA [BrandynCO] - Front-End Developer that creates responsive webpages for fun. Also dabbles in FM synth, board games, RPGs.
 - [Tarin Pratt](https://github.com/tarinpratt) - AKA [tarinpratt] - Front-End Developer with experience using HTML, CSS, JavaScript, jQuery, React, Node, Express, and PostgreSQL. Background in performing arts and entertainment.
 - [Lindsey Dobrinski](https://github.com/ldobrinski) - AKA [Lindz] - Front-End Developer.
 - [Brendan Kenney](https://github.com/ReyWilly) - AKA [Smiley] - Beginner Programmer, learning HTML, CSS, and JavaScript. Actively learning new languages to expand my knowledge. Open to internships and careers.
+- [Brandyn Orr](https://github.com/BrandynCO) - AKA [BrandynCO] - Front-End Developer that creates responsive webpages for fun. Also dabbles in FM synth, board games, RPGs.
 
 ## Chingu
 
 This project is part of the [Chingu](https://chingu.io) program.<br/>
-"Chingu is a remote 6-week program for web developers. <br/>You will build a project in a remote team and level up with the technical and soft skills required in a professional software job."<br/>
+"Chingu is a remote 6-week program for web developers. <br/>
 Please visit them at the link above!
