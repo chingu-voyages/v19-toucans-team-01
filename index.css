@@ -120,6 +120,95 @@ form.petSearch {
     cursor: pointer;
 }
 
+/* about page */
+body {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E96435;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.box1 {
+    height: 80vh;
+    width: 100%;
+    background-image: url(assets/hatchiko-wide.jpg);
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+}
+
+.aboutTitle h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    border-bottom: #E96435 1px solid;
+}
+
+.aboutTitle p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    text-align: left;
+    padding: 40px 10px 40px 40px;
+}
+
+.about {
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    text-align: left;
+    padding: 40px 10px 40px 40px;
+}
+
+.statue h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    color: white;
+    margin: 0px;
+    text-align: center;
+}
+
+.statue p{
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    text-align: left;
+    padding: 40px 10px 40px 40px;
+}
+
+.box2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/Hachiko.png);
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+}
+
+.box3 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(assets/haichkostatue.png);
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+}
+
+
 /* results page */
 
 .searchResultsPage {
@@ -294,6 +383,7 @@ p.noResults {
     text-align: center;
     padding: 20px;
 }
+
 
 /* Buttons and button properties */
 
@@ -507,6 +597,9 @@ p.devName:hover {
     width: 100%;
     margin-top: 0;
     }
+    .collage-text {
+        font-size: 5px;
+    }
 }  
 
 @media screen and (max-width: 400px) {
@@ -647,10 +740,21 @@ p.devName:hover {
         object-fit: contain;
     }
     .collage-text {
-        line-height: 20px;
+        line-height: 30px;
         font-size: 15px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    }
+    .collage-text {
+        font-size: 12px;
+        line-height: 19px;
+    }
+}  
 
 @media only screen and (max-width: 411px) { 
     .parent {
