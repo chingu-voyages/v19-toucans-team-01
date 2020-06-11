@@ -22,8 +22,6 @@ font-family: 'Numans', sans-serif;
     box-sizing: border-box;
 }
 
-/* Body and Headings */
-
 p {
     font-family: 'Numans', sans-serif;
     padding-bottom: 20px;
@@ -144,7 +142,6 @@ h1 {
     padding: 15px;
     margin-right: auto;
     margin-left: auto;
-    /* margin-top: 20px; */
     margin-bottom: 20px;
     border-radius: 6px;
 }
@@ -371,6 +368,7 @@ p.noResults {
 
 .collage-text {
 padding-right: 20px;
+line-height: 30px;
 }
 
 /* Contact Us form */
@@ -438,23 +436,38 @@ input[type=text], select, textarea{
     display: table;
     clear: both;
   }
-   
-  @media screen and (max-width: 500px) {
-    .col-25, .col-75, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
-  }
-   
-  .footer {
-    padding-left: 5%; 
-    height: 5vh;
-    text-align: center;
+
+/* footer */
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     font-family: 'Poppins', sans-serif;
-    text-align: left;
-    font-size: 14px;
+    font-size: 17px;
+    color: white;
     background-color:  #12BB97;
     bottom: 0;
+}
+
+.github {
+    margin-right: 10px;
+    margin-left: 40px;
+    color: white;
+}
+p.devInfo {
+    padding: 40px;
+}
+p.devName {
+    padding: 5px;
+}
+p.devName:hover {
+    color: #E96435;
+}
+.footer-right {
+    border-left: white 1px solid;
+    display: flex;
+    flex-direction: column;
 }
 
 /* loading spinner */
@@ -487,14 +500,37 @@ input[type=text], select, textarea{
     visibility: visible;
   }
 
-  
-
   /* media queries  */
+
+@media screen and (max-width: 500px) {
+    .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    }
+}  
 
 @media screen and (max-width: 400px) {
       form.petSearch {
           width: 300px;
       }
+}
+
+@media screen and (max-width: 470px) {
+    p.devName {
+        font-size: 10px;
+        padding: 2px;
+    }
+    p.devInfo {
+        font-size: 10px;
+        padding: 30px;
+    }
+    .footer {
+        justify-content: space-evenly;
+    }
+    .github {
+        margin-left: 3px;
+    }
+
 }
 
 @media screen and (min-width: 650px) {
@@ -610,13 +646,9 @@ input[type=text], select, textarea{
     .collage-img {
         object-fit: contain;
     }
-
-    .collage-heading {
-        font-size: 1em;
-    }
-
     .collage-text {
-        font-size: .50em;
+        line-height: 20px;
+        font-size: 15px;
     }
 }
 
@@ -641,12 +673,10 @@ input[type=text], select, textarea{
 
     
         .collage-heading {
-            font-size: .5em;
             text-align: center;
         }
     
         .collage-text {
-            font-size: .05em;
             text-align: center;
         }
 }
