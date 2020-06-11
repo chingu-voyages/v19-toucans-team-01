@@ -135,7 +135,7 @@ body {
 .box1 {
     height: 80vh;
     width: 100%;
-    background-image: url(assets/hatchiko-wide.jpg);
+    background-image: url(Assets/hatchiko-wide.jpg);
     background-size: cover;
     background-position: center;
     display: table;
@@ -191,7 +191,7 @@ body {
 .box2 {
     height: 100vh;
     width: 100%;
-    background-image: url(assets/Hachiko.png);
+    background-image: url(Assets/Hachiko.png);
     background-size: cover;
     background-position: center;
     display: table;
@@ -201,7 +201,7 @@ body {
 .box3 {
     height: 100vh;
     width: 100%;
-    background-image: url(assets/haichkostatue.png);
+    background-image: url(Assets/haichkostatue.png);
     background-size: cover;
     background-position: center;
     display: table;
