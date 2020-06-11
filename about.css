@@ -4,40 +4,41 @@
     box-sizing: border-box;
 }
 
-nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-color: #12BB97;
+/* Navigation bar */
+
+ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+.nav {
     font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+    background-color: #12BB97;
 }
-.logo {
-    text-transform: uppercase;
-    letter-spacing: 5px;
-    font-size: 20px;
-    margin: 10px 0px 10px 30px;
+
+nav.nav a.logo img {
+      padding-top: 0px;
+      height: 50px;
+      padding-bottom: 0px;
 }
-.logo img{
-    height:8vh;
-    width:8vh;
-}
-.nav-links {
-    display: flex;
-    justify-content: space-evenly;
-    width: 200%;
-}
-.nav-links li {
-    list-style: none;
-    padding-right: 10px;
-}
-.nav-links a {
+
+.nav a {
+    float: left;
+    display: block;
     color: white;
+    text-align: center;
+    padding: 14px 16px;
     text-decoration: none;
-    letter-spacing: 3px;
-    font-weight: bold;
-    font-size: 14px;
+    font-size: 17px;
+}
+
+.nav .icon {
+    display: none;
+}
+
+.nav a.logo img {
+    float: left;
 }
 .burger {
     display: none;
@@ -118,7 +119,7 @@ body {
 }
 
 .box1 {
-    height: 80vh;
+    height: 70vh;
     width: 100%;
     background-image: url(assets/hatchiko-wide.jpg);
     background-size: cover;
@@ -142,6 +143,7 @@ body {
     margin: 0px;
     text-align: left;
     padding: 40px 10px 40px 40px;
+    background: #143D47;
 }
 
 .about {
@@ -163,9 +165,9 @@ body {
 }
 
 .box2 {
-    height: 100vh;
+    height: 70vh;
     width: 100%;
-    background-image: url(assets/Hachiko.png);
+    background-image: url(assets/Hachiko2.png);
     background-size: cover;
     background-position: center;
     display: table;
@@ -181,3 +183,4 @@ body {
     display: table;
     background-attachment: fixed;
 }
+

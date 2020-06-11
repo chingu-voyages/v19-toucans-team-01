@@ -16,22 +16,17 @@
 
 <body>
     <nav>
-
-        <div class="logo">
-            <img src="./images/logo.png">
-        </div>
-
-        <ul class="nav-links">
-            <li class="home">
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="#">Search</a>
-            </li>
-            <li>
-                <a href="about.html">About Hachikō</a>
-            </li>
-        </ul>
+ <!-- nav bar -->
+ <nav class="nav" id="topNav">
+    <a href="index.html" class="logo"><img src="./images/logo/Logo.png" alt="logo"></a>
+     <a href="index.html" class="home">Home</a>
+     <a href="about.html" class="aboutHachiko">About Hachiko</a>
+     <a href="search.html" class="searchPage">Search</a>
+     <a href="contact.html" class="contact">Contact</a>
+     <div class="iconToggle">
+     <a href="javascript:void(0);" style="font-size:38px;" class="icon" onclick="navDrop()"><i class="fas fa-bars"></i></a>
+     </div>
+   </nav>
 
         <div class="burger">
             <div class="line1"></div>
@@ -71,6 +66,8 @@
         </div>
 
     </section>
+    
+
 
 </body>
 
