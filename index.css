@@ -239,6 +239,7 @@ li.age,
 li.gender,
 li.breedType {
     font-weight: bolder;
+    color: black;
 }
 
 .animalImg, .imgNotAvail {
