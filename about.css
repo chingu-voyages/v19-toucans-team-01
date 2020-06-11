@@ -133,6 +133,7 @@ body {
     font-size: 48px;
     color: white;
     margin: 0px;
+    background-color: #E96435;
     text-align: center;
     border-bottom: #E96435 1px solid;
 }
@@ -144,7 +145,8 @@ body {
     margin: 0px;
     text-align: left;
     padding: 40px 10px 40px 40px;
-    background: #143D47;
+    background-color: #E96435;
+
 }
 
 .about {
@@ -155,6 +157,7 @@ body {
     margin: 0px;
     text-align: left;
     padding: 40px 10px 40px 40px;
+    background-color: #E96435;
 }
 
 .statue h2 {
@@ -163,6 +166,7 @@ body {
     color: white;
     margin: 0px;
     text-align: center;
+    background-color: #E96435;
 }
 
 .statue p{
@@ -173,6 +177,7 @@ body {
     margin: 0px;
     text-align: left;
     padding: 40px 10px 40px 40px;
+    background-color: #E96435;
 }
 
 .box2 {
