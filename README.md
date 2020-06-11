@@ -2,8 +2,6 @@
 
 # Hachiko
 
-Make scheduling meetings across different timezones easier with Chingu Time!
-
 This Project is part of the [Chingu.io](https:chingu.io) Voyages - Voyage 19 - [V19-Toucans-Team-01]
 
 ## Description
