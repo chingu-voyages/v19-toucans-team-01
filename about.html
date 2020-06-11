@@ -1,10 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
     <title>Hachiko - About</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css'>
@@ -13,39 +11,25 @@
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"
         integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <nav>
+    <!-- nav bar -->
+    <nav class="nav" id="topNav">
+        <a href="index.html" class="logo"><img src="./images/logo/Logo.png" alt="logo"></a>
+         <a href="index.html" class="home">Home</a>
+         <a href="about.html" class="aboutHachiko">About Hachikō</a>
+         <a href="search.html" class="searchPage">Search</a>
+         <a href="contact.html" class="contact">Contact</a>
+         <div class="iconToggle">
+         <a href="javascript:void(0);" style="font-size:38px;" class="icon" onclick="navDrop()"><i class="fas fa-bars"></i></a>
+         </div>
+       </nav>
 
-        <div class="logo">
-            <img src="./images/logo.png">
-        </div>
-
-        <ul class="nav-links">
-            <li class="home">
-                <a href="index.html">Home</a>
-            </li>
-            <li>
-                <a href="#">Search</a>
-            </li>
-            <li>
-                <a href="about.html">About Hachikō</a>
-            </li>
-        </ul>
-
-        <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
-
-    </nav>
-
+    <!-- about section -->
     <section>
         <div class="box1">
         </div>
             <div class="aboutTitle">
-                <h1>Who was Hachikō? </h1>
+                <h1 class="aboutTitle">Who was Hachikō? </h1>
             </div>
             <div class="about">
                 <p>Hachiko, a golden brown Akita, was born on November 10, 1923 at a farm located in Ōdate, Akita Prefecture, Japan. In 1924, Hidesaburō Ueno, a professor in the agriculture department at the Tokyo Imperial University, took Hachikō as a pet and brought him to live in Shibuya, Tokyo. Ueno would commute daily to work, and Hachikō would leave the house to greet him at the end of each day at the nearby Shibuya Station. The pair continued the daily routine until May 21, 1925, when Ueno did not return. The professor had suffered a cerebral hemorrhage, while he was giving a lecture to his class, and died without ever returning to the train station in which Hachikō waited.
@@ -69,9 +53,6 @@
             <div class="box3">
             </div>
         </div>
-
     </section>
-
 </body>
-
 </html>
