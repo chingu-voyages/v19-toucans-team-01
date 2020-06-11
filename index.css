@@ -550,6 +550,7 @@ p.devInfo {
 }
 p.devName {
     padding: 5px;
+    text-align: left;
 }
 p.devName:hover {
     color: #E96435;
