@@ -133,9 +133,11 @@ body {
 }
 
 .box1 {
-    height: 80vh;
+    height: 100vh;
     width: 100%;
     background-image: url(Assets/hatchiko-wide.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
     background-size: cover;
     background-position: center;
     display: table;
@@ -192,6 +194,8 @@ body {
     height: 100vh;
     width: 100%;
     background-image: url(Assets/Hachiko.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     background-size: cover;
     background-position: center;
     display: table;
@@ -202,6 +206,8 @@ body {
     height: 100vh;
     width: 100%;
     background-image: url(Assets/haichkostatue.png);
+    background-repeat: no-repeat;
+    background-size: contain;
     background-size: cover;
     background-position: center;
     display: table;
@@ -675,6 +681,11 @@ p.devName:hover {
     }
     .nav.responsive a.home {
         margin-top: 70px;
+    }
+    .box1 {
+        max-width: 600px;
+        background-size: contain;
+        height: 300px;
     }
   }
 
