@@ -235,6 +235,11 @@ main {
     box-shadow: 2px 2px rgb(83, 170, 141);
     text-align: center;
   }
+
+#btnToTop:hover {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
   
 
 .searchResultsPage {
