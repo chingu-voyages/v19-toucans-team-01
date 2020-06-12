@@ -51,8 +51,8 @@ fetch('https://api.petfinder.com/v2/oauth2/token', {
   return response.json()
  // running the rendering function 
 }).then(data => 
-  displayResults(data.animals))
-  searchSubmitButton()
+  displayResults(data.animals),
+  searchSubmitButton())
 .catch(err => {
   console.log('something went wrong', err)
 })
@@ -93,6 +93,8 @@ data.map((i) => {
     `);
   });
   $('#results').show();
+  $('#results').append(`
+  <a href="#topNav" id="btnToTop">Back To Top</a>`)
   $('.bottom').hide();
   homeRender();
 }

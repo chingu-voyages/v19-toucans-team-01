@@ -121,7 +121,7 @@ body {
 .box1 {
     height: 70vh;
     width: 100%;
-    background-image: url(assets/hatchiko-wide.jpg);
+    background-image: url(Assets/hatchiko-wide.jpg);
     background-size: cover;
     background-position: center;
     display: table;
@@ -183,7 +183,7 @@ body {
 .box2 {
     height: 70vh;
     width: 100%;
-    background-image: url(assets/Hachiko2.png);
+    background-image: url(Assets/Hachiko2.png);
     background-size: cover;
     background-position: center;
     display: table;
@@ -193,16 +193,22 @@ body {
 .box3 {
     height: 100vh;
     width: 100%;
-    background-image: url(assets/haichkostatue.png);
+    background-image: url(Assets/haichkostatue.png);
     background-size: cover;
     background-position: center;
     display: table;
     background-attachment: fixed;
 }
 
-@media screen and (max-device-width: 600px) {
+@media screen and (max-width: 600px) {
     .box1{
-        background-image: url(Assets/hatchiko-wide.jpg)
+        background-image: url(Assets/hatchiko-wide.jpg);
+    }
+    .box2{
+        background-image: url(Assets/Hachiko2.png);
+    }
+    .box3{
+        background-image: url(Assets/haichkostatue.png);
     }
 }
 

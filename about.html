@@ -25,6 +25,7 @@
        </nav>
 
     <!-- about section -->
+    <main>
     <section>
         <div class="box1">
         </div>
@@ -54,5 +55,16 @@
             </div>
         </div>
     </section>
+</main>
+<script>
+    function navDrop() {
+      let x = document.getElementById("topNav");
+      if (x.className === "nav") {
+        x.className += " responsive";
+      } else {
+        x.className = "nav";
+      }
+    }
+  </script>
 </body>
 </html>

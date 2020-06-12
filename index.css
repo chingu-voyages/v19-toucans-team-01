@@ -5,15 +5,6 @@
 #F7E488 - Light Yellow
 #90D49F - Mint
 #E96435 - Flame
-
-Fonts
-Montserrat 600
-Muli 600
-Numans normal
-
-font-family: 'Montserrat', sans-serif;
-font-family: 'Muli', sans-serif;
-font-family: 'Numans', sans-serif;
 */
 
 * {
@@ -54,6 +45,8 @@ nav.nav a.logo img {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    animation-name: moveInRight;
+    animation-duration: 1s;
 }
 
 .nav .icon {
@@ -64,7 +57,7 @@ nav.nav a.logo img {
     float: left;
 }
 
-/* landing page */
+/* Landing Page */
 
 .landing {
     height: 500px; 
@@ -76,10 +69,11 @@ nav.nav a.logo img {
 label.landingLabel {
     font-family: 'Poppins', sans-serif;
     color: #143D47;
-    font-size: 20px;
+    font-size: 30px;
     display: block;
-    padding: 20px;
-    font-weight: bold;
+    padding: 10px;
+    text-shadow: 1px 1px 2px black;
+    letter-spacing: 2px;
 }
 
 .searchCategories {
@@ -99,7 +93,9 @@ form.petSearch {
     margin-right: auto;
     margin-bottom: 55vh;
     text-align: center; 
-    border-radius: 6px;  
+    border-radius: 6px; 
+    animation-name: bounceIn;
+    animation-duration: 2s; 
 }
 
 .submitButton {
@@ -108,19 +104,143 @@ form.petSearch {
     margin-right: auto;
     margin-top: 20px;
     padding: 10px;
-    border-color: #E96435;
+    border: #E96435 1px solid;
     border-radius: 6px;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
     background-color: #E96435;
     color: white;
+    transition: 0.5s;
 }
 
 .submitButton:hover {
     cursor: pointer;
+    color: #E96435; 
+    border-color: #E96435 2px solid;
+    background-color: #143D47;
+    padding: 12px;
+    width: 100px;
+    font-size: 17px;
+    font-weight: bolder;
 }
 
-/* results page */
+/* About Page */
+main {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    background-color: #E96435;
+    color: white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.box1 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(Assets/hatchiko-wide.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+}
+
+.aboutTitle h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    color: white;
+    margin: 0px;
+    text-align: center;
+    border-bottom: #E96435 1px solid;
+}
+
+.aboutTitle p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    text-align: left;
+    padding: 40px 10px 40px 40px;
+}
+
+.about {
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    text-align: left;
+    padding: 40px 10px 40px 40px;
+}
+
+.statue h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 48px;
+    color: white;
+    margin: 0px;
+    text-align: center;
+}
+
+.statue p{
+    line-height: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    color: white;
+    margin: 0px;
+    text-align: left;
+    padding: 40px 10px 40px 40px;
+}
+
+.box2 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(Assets/Hachiko.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+}
+
+.box3 {
+    height: 100vh;
+    width: 100%;
+    background-image: url(Assets/haichkostatue.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: table;
+    background-attachment: fixed;
+}
+
+
+/* Results Page */
+
+#btnToTop {
+    position: fixed;
+    bottom: 10px;
+    font-size: 13px;
+    font-weight: bolder;
+    border: none;
+    background-color:#90D49F;
+    color: #143D47;
+    cursor: pointer;
+    border-radius: 30px;
+    width: 100px;
+    opacity: 0.8;
+    right: 2px;
+    padding: 5px;
+    box-shadow: 2px 2px rgb(83, 170, 141);
+    text-align: center;
+  }
+
+#btnToTop:hover {
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+  
 
 .searchResultsPage {
     background-color:rgb(241, 233, 189);
@@ -134,6 +254,8 @@ h1 {
     margin-bottom: 20px;
     color: #143D47;
     border-bottom: 1px grey solid;
+    animation-name: moveInLeft;
+    animation-duration: 3s;
 }
 
 .resultCard{
@@ -150,6 +272,7 @@ li.age,
 li.gender,
 li.breedType {
     font-weight: bolder;
+    color: black;
 }
 
 .animalImg, .imgNotAvail {
@@ -201,7 +324,7 @@ form.searchForm {
     display: block;
     width: 100px;
     padding: 5px;
-    border-color: #E96435;
+    border: #E96435 2px solid;
     border-radius: 6px;
     font-family: 'Poppins', sans-serif;
     font-size: 15px;
@@ -216,6 +339,11 @@ form.searchForm {
 
 .searchSubmitButton:hover {
     cursor: pointer;
+    background-color: #90D49F;
+    color: #143D47;
+    width: 100px;
+    font-weight: bolder;
+    border-color: #143D47;
 }
 
 .hiddenSearchPageCategories {
@@ -227,8 +355,13 @@ form.searchForm {
 }
 
 .searchPageContainer {
-    height: 100vh;
-    background-color: rgb(241, 233, 189);
+    height: 60vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to right,rgba(241, 230, 206, 0.788),rgba(255, 184, 77, 0.3)),url(images/silhouette.jpg);
+    animation-duration: 2s;
+    animation-name: bounceIn;
 }
 
 select:hover {
@@ -278,7 +411,7 @@ p.noResults {
     font-weight: bolder;
 }  
 
-/* 3 box section */
+/* 3 Box Section */
 
 .three-box {
     height: 40vh;
@@ -295,7 +428,8 @@ p.noResults {
     padding: 20px;
 }
 
-/* Buttons and button properties */
+
+/* Buttons  */
 
 .btn {
     height: 60px;
@@ -367,8 +501,9 @@ p.noResults {
 }
 
 .collage-text {
-padding-right: 20px;
-line-height: 30px;
+    text-align: left;
+    padding-right: 20px;
+    line-height: 30px;
 }
 
 /* Contact Us form */
@@ -400,6 +535,7 @@ input[type=text], select, textarea{
     box-sizing: border-box;
     resize: vertical;
     font-family: 'Poppins', sans-serif;
+    opacity: 0.8;
   }
 
   label {
@@ -437,7 +573,7 @@ input[type=text], select, textarea{
     clear: both;
   }
 
-/* footer */
+/* Footer */
 
 .footer {
     display: flex;
@@ -460,6 +596,7 @@ p.devInfo {
 }
 p.devName {
     padding: 5px;
+    text-align: left;
 }
 p.devName:hover {
     color: #E96435;
@@ -470,7 +607,7 @@ p.devName:hover {
     flex-direction: column;
 }
 
-/* loading spinner */
+/* Loading spinner */
 
 .spinner{
     visibility: hidden;
@@ -487,25 +624,77 @@ p.devName:hover {
     margin: auto;
     animation: spin 1s infinite linear;
   }
+
+.spinner.show {
+    visibility: visible;
+}
+
+/* Keyframes */
   
-  @keyframes spin {
+@keyframes spin {
     from {
-        transform: rotate(0deg);
-    } to {
-        transform: rotate(360deg);
+    transform: rotate(0deg);
+}   
+    to {
+    transform: rotate(360deg);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translate(0);
     }
   }
   
-  .spinner.show {
-    visibility: visible;
+@keyframes moveInTop{
+    0% {
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
   }
 
-  /* media queries  */
+@keyframes moveInRight{
+    0% {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+  
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+  }
+
+@keyframes bounceIn {
+    0% { 
+      transform: scale(0.1);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+  /* Media Queries  */
 
 @media screen and (max-width: 500px) {
     .col-25, .col-75, input[type=submit] {
     width: 100%;
     margin-top: 0;
+    }
+    .collage-text {
+        font-size: 5px;
     }
 }  
 
@@ -647,10 +836,21 @@ p.devName:hover {
         object-fit: contain;
     }
     .collage-text {
-        line-height: 20px;
+        line-height: 30px;
         font-size: 15px;
     }
 }
+
+@media screen and (max-width: 500px) {
+    .col-25, .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+    }
+    .collage-text {
+        font-size: 12px;
+        line-height: 19px;
+    }
+}  
 
 @media only screen and (max-width: 411px) { 
     .parent {
