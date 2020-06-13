@@ -143,17 +143,6 @@ main {
     border-radius: 100px;
 }
 
-/* .box1 {
-    height: 100vh;
-    width: 100%;
-    background-image: url(images/hachiko.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: table;
-    background-attachment: fixed;
-} */
-
 .aboutTitle h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 48px;
@@ -198,6 +187,10 @@ main {
     margin: 0px;
     text-align: left;
     padding: 40px 10px 40px 40px;
+}
+
+.imgBox2, .imgBox3 {
+    display: none;
 }
 
 .box2 {
@@ -789,13 +782,13 @@ p.devName:hover {
       .aboutHachikoImg {
           width: 100%;
       }
-      .box2 {
-        height: 55vh;
-        background-size: auto;
+      .box2, .box3 {
+          background: none;
+          height: auto;
       }
-      .box3 {
-        background-size: auto;
-        height: 70vh;
+      .imgBox2, .imgBox3 {
+          display: block;
+          width: 100%;
       }
   }
 
