@@ -1,12 +1,3 @@
-/* Colors 
-#143D47 - Midnight green
-#12BB97 - Mountain meadow
-#FFFAFB - Snow
-#F7E488 - Light Yellow
-#90D49F - Mint
-#E96435 - Flame
-*/
-
 * {
     margin: 0px;
     padding: 0px;
@@ -214,7 +205,6 @@ main {
     display: table;
     background-attachment: fixed;
 }
-
 
 /* Results Page */
 

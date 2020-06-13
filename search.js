@@ -1,5 +1,4 @@
 'use strict';
-//need to eventually hide these in a private file (technically)
 const key = 'DxMJ184GRqtRPnaqWdp3BbMtG00mbQtE8feSDnTiM6fAHO997P';
 const secret = 'KOE3gOf7D7j36alVVrzPfGLZLzIQjnmXXUcQN4Rx';
 
@@ -22,6 +21,7 @@ function searchRender() {
   })
 }
 
+//hides search page container
 function searchSubmitButton() {
     $('div.searchPageContainer').css('height', '0');
 }
@@ -255,7 +255,6 @@ function searchTypeToggle() {
 
 //run all search functionality
 $(function() {
-  
   searchTypeToggle()
   breeds()
   toggleNav()
