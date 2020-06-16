@@ -37,6 +37,7 @@ Hachikō is an application created for users to search for adoptable pets in loc
 * CSS
 * JavaScript
 * JQuery
+* Petfinder API
 
 ## Developers
 
