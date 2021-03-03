@@ -1,6 +1,6 @@
 'use strict';
-const key = 'DxMJ184GRqtRPnaqWdp3BbMtG00mbQtE8feSDnTiM6fAHO997P';
-const secret = 'KOE3gOf7D7j36alVVrzPfGLZLzIQjnmXXUcQN4Rx';
+const key = 'wqELwRpqrp8rhaJzYKsBRlbFd7vnpEcfSzkpLVw1qwum5LZlSg';
+const secret = '2XnR5kFM6XKMtB2YqczAStAOvLvre0cZlawWTMWd';
 
 //renders home from nav bar and hides results and search page form
 function homeRender() {
